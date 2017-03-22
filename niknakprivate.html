@@ -1,23 +1,75 @@
 <html>
     <link rel="stylesheet" type="css" href="niknakstyle.css">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Fredoka+One|Nunito|Quicksand|Rubik+Mono+One" rel="stylesheet">
     <style>
         body{
-            background-color: antiquewhite;
+            font-family: "Fredoka One";
+        }
+        header{
+            width: 100%;
+            margin: auto;
+            background-color: white;
+        }
+        #nav{
+            bborder: solid black 1px;
+            width: 100%;
+            height: 8%;
+            margin: auto;
+            display:flex;
+            justify-content: center;
+            padding: 10%, 0%;
+            background-color: white;
+        }
+        .navlink{
+            width: 35%;
+            float: left;
+            padding-top: 4%;
+            text-align: center;
+            bborder: black solid 1px;
+            border-radius: 15px;
+            margin: 2%;
+            font-family: "Fredoka One";
+            font-size: 10pt;
+        }
+        #splashimage{
+            width: 80%;
+        }
+        #splash{
+            text-align: center;
+            padding: 5%;
         }
         #content{
-            width: 400px;
             height: 100%;
-            margin: auto;
-            background-color: aliceblue;
+            background-color: white;
+            border: solid black 1px;
+        }
+        h1{
+            
         }
     </style>
 </head>
     
 <body>
-    <div id=content>
-        dfgadsg
+    <header>
+        <div id="splash"><img id="splashimage" src="niknaklogo_color@4x.png" ></div>
+    </header>
+    <div id="nav">
+        <div class="navlink" style= "background-color:#f93d6e; color:#4ac1d2">
+            Summary
+        </div>
+        <div class="navlink" style= "background-color:#4ac1d2; color:#ffce00">
+            The Market
+        </div>
+        <div class="navlink" style= "background-color:#ffce00; color:#4ac1d2">
+            The Team
+        </div>
+        <div class="navlink" style= "background-color:#f93d6e; color:#ffce00">
+            The Deal
+        </div>
     </div>
-    
+    <div id="content">
+        
+    </div>
 </body>
 </html>
