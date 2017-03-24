@@ -14,13 +14,13 @@ font-family: 'Fredoka One', cursive;
 			<style>
 			
 				#all{
-					background-image: url(topography.png);
+					bbackground-image: url(topography.png);
 					margin-top:0%;
 					top: 0px;
 					bottom: 0px;
 					right: 0px;
 					left: 0px;
-					position:absolute;
+					position: absolute;
 					
 					
 				}
@@ -32,8 +32,12 @@ font-family: 'Fredoka One', cursive;
 					margin-top: 2%;
 					float:inherit;
 					height: 48px;
-					
-					
+					position: fixed;
+				}
+				
+				#splashimg{
+					margin-top: 8%;
+					width: 100%;
 					
 				}
 			
@@ -72,8 +76,25 @@ font-family: 'Fredoka One', cursive;
 				}
 				.active {
 					background-color: #f93d6e;
-
-			
+				}
+				
+				#footer{
+					background-color: gray;
+					display: flex;
+					justify-content: center;
+					ppadding: 5%;
+					height: 20%;
+					align-items: center;
+					font-family: "Quicksand";
+					}
+					
+				#icon{
+					height: 50px;
+					margin: 1%;
+					
+					
+				}
+				
 			</style>
 	</head>
 	<body>
@@ -83,7 +104,7 @@ font-family: 'Fredoka One', cursive;
 	
 <div id="splash"><img src="niknaklogo_color@4x.png" id="nikimg" ></div>
 					
-
+<div>
 <ul>
   <li><a class="active" href="#home">Home</a></li>
   <li><a href="#pitch">Pitch</a></li>
@@ -91,8 +112,11 @@ font-family: 'Fredoka One', cursive;
   <li><a href="#about">About Us</a></li>	
   <li><a href="#product">Product</a></li>
 </ul>
-
-
+</div>
 	
+<div> <img src="garage.jpg" id="splashimg" ></div>
+	
+	<div id="footer">Follow us on<img src="fb-art.png" id="icon" > </div>
+	</div>
 	</body>
 </html>
