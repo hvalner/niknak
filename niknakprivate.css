@@ -44,7 +44,10 @@
             margin-top: 8%;
             background-color: white;
             bborder: solid black 1px;
-            text-align: center;
+            text-align: left;
+            padding-left: 6%;
+            padding-right: 6%;
+            line-height: 1.2;
         }
         a{
             text-decoration: none;
@@ -52,13 +55,25 @@
         }
         h2{
            font-size: 17pt; 
-            text-align: left;
-            margin-left: 6%;
             margin-right: 6%;
+            color:#4ac1d2;
+        }
+        h3{
+            font-size: 13pt;
+            margin-left: 8%;
         }
         p{
-            text-align: left;
             margin-left: 8%;
-            margin-right: 6%;
-            
         }
+        
+ /* SPECIFIC TO MARKET */
+.leftalign{
+    text-align: right;
+}
+.competition{
+    color:black;
+    transition: all 200ms ease-in-out;
+    }
+.competition:hover{
+    text-decoration: underline;
+}
