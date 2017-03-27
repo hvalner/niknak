@@ -77,3 +77,16 @@
 .competition:hover{
     text-decoration: underline;
 }
+
+/* MEDIA QUERY */
+@media screen and (min-width: 700px) {
+    #splashimage{
+        width: 430px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    body{
+        width: 1000px;
+        margin: auto;
+    }
+}
