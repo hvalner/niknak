@@ -1,0 +1,64 @@
+        body{
+            font-family: "Quicksand";
+            bbackground-image: url(topography.png);
+        }
+        header{
+            width: 100%;
+            margin: auto;
+            color: #ffce00;
+            font-family: "Fredoka One";
+
+        }
+        #nav{
+            bborder: solid black 1px;
+            height: 50px;
+            margin: auto;
+            display:flex;
+            justify-content: center;
+            background-color: white;
+        }
+        .navlink{
+            width: 35%;
+            float: left;
+            padding-top: 15px;
+            display:flex;
+            justify-content: center;
+            bborder: black solid 1px;
+            margin: 0% 2%;
+            font-family: "Quicksand";
+            font-size: 12pt;
+            transition: all 200ms ease-in-out;
+        }
+        .navlink:hover{
+            background-color: #4ac1d2;
+        }
+        #splashimage{
+            width: 70%;
+        }
+        #splash{
+            text-align: center;
+            padding: 5%;
+        }
+        #content{
+            margin: auto;
+            margin-top: 8%;
+            background-color: white;
+            bborder: solid black 1px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: #ffce00;
+        }
+        h2{
+           font-size: 17pt; 
+            text-align: left;
+            margin-left: 6%;
+            margin-right: 6%;
+        }
+        p{
+            text-align: left;
+            margin-left: 8%;
+            margin-right: 6%;
+            
+        }
