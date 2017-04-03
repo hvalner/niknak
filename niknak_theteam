@@ -1,0 +1,29 @@
+<html>
+    <link rel="stylesheet" type="css" href="niknakstyle.css">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Fredoka+One|Nunito|Quicksand|Rubik+Mono+One" rel="stylesheet">
+    <style>
+        body{
+            font-family: "Fredoka One";
+        }
+        header{
+            width: 100%;
+            margin: auto;
+            background-color: white;
+      
+    </style>
+</head>
+    
+<body>
+    <header>
+        <div id="splash"><img id="splashimage" src="niknaklogo_color@4x.png" ></div>
+    </header>
+    <div id="nav">
+        
+        </div>
+    </div>
+    <div id="content">
+        
+    </div>
+</body>
+</html>
