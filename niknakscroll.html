@@ -5,11 +5,12 @@
     <style>
         body{
             background-color: #4ac1d2;
+            font-family: Fredoka One;
+             color: white;
         }
         h1{
             font-family: Fredoka One;
             font-size: 34pt;
-            color: white;
         }
         .dot{
            width: 50%;
@@ -23,7 +24,7 @@
             position: fixed;
             height: 20%;
             width: 2%;
-            left: 1%;
+            right: 1%;
             top: 20%;
             z-index: 100;
             bborder: 1px black solid;
@@ -31,12 +32,16 @@
         #screen1{
             position: relative;
             background-color: #4ac1d2;
-            height: 100%;
-            width: 100%;
+            height: 1000px;
+            width: 1300px;
+        }
+        #box1{
+            position: absolute;
+            width: 60%;
         }
         #china{
             position: absolute;
-            width: 60%;
+            width: 100%;
             left: -10%;
             top: 5%;
         }
@@ -53,16 +58,16 @@
             color: white;
             font-size: 14pt;
             position: absolute;
-            right: 10%;
-            top: 2%;
-            border: red solid 1px;
+            right: 100px;
+            top: 50px;
+            bborder: red solid 1px;
         }
         #bearings{
             position: absolute;
-            height: 10%;
+            height: 30%;
             width: 5%;
-            left: 30%;
-            top: 20%;
+            left: 40%;
+            top: 30%;
             bborder: red solid 1px;
         }
         #bearing1{
@@ -72,7 +77,7 @@
             position: absolute;
             width: 40%;
             left: 20%;
-            top: 20%;
+            top: 10%;
         }
         #bearing3{
             width: 40%;
@@ -123,6 +128,7 @@
         }
     </style>
 </head>
+<!--   DRAG AND DROP - USE FOR BEARINGS http://www.webreference.com/programming/javascript/mk/column2/index.html-->
 <body>
     <div id="dots">
     </div>
@@ -130,11 +136,15 @@
         <div id="bearingtext"><h1>Step 1: Order Bearings</h1>
             We source our bearings directly from factories in China<br>so we can get the best value on high quality parts.
         </div>
+        <div id="box1">
         <img id="china" src="niknakgraphics/china.png" alt="china">
+        </div>
         <div id="bearings">
         <img id="bearing1" src="niknakgraphics/bearingf.png">
         <img id="bearing2" src="niknakgraphics/bearingf.png">
         <img id="bearing3" src="niknakgraphics/bearingf.png">
+            <br><br>
+        Pick me up!
         </div>
         <img id="california" src="niknakgraphics/cali.png">
         <input type="image" alt="next" src="niknakgraphics/dot.png">
