@@ -5,11 +5,11 @@
     <style>
         body{
             background-color: #4ac1d2;
-            font-family: Fredoka One;
+            font-family: Fredoka One, sans-serif;
              color: white;
         }
         h1{
-            font-family: Fredoka One;
+            font-family: Fredoka One, sans-serif;
             font-size: 34pt;
         }
         .dot{
@@ -32,8 +32,10 @@
         #screen1{
             position: relative;
             background-color: #4ac1d2;
-            height: 1000px;
-            width: 1300px;
+            height: 900px;
+            width: 1500px;
+            margin: 70px auto;
+            border: 1px red solid;
         }
         #box1{
             position: absolute;
@@ -42,7 +44,7 @@
         #china{
             position: absolute;
             width: 100%;
-            left: -10%;
+            left: 0%;
             top: 5%;
         }
          #california{
@@ -54,7 +56,7 @@
              
         }
         #bearingtext{
-            font-family: Quicksand;
+            font-family: Quicksand, serif;
             color: white;
             font-size: 14pt;
             position: absolute;
@@ -66,8 +68,8 @@
             position: absolute;
             height: 30%;
             width: 5%;
-            left: 40%;
-            top: 30%;
+            left: 47%;
+            top: 38%;
             bborder: red solid 1px;
         }
         #bearing1{
@@ -84,9 +86,12 @@
         }
 /*        SCREEN 2*/
         #screen2{
+            position: relative;
             background-color: white;
-            height: 105%;
-            width: 100%;
+            height: 900px;
+            width: 1500px;
+            margin: 70px auto;
+            border: 1px red solid;
         }
         #fil{
             width:30%;
@@ -95,36 +100,59 @@
             float: left;
         }
         .filimg{
-            width: 50%;
-            margin: 3%;
+            width: 210px;
+            margin: 20px 30px;
+        }
+        #filamenttext{
+            position: absolute;
+            color: grey;
+            right: 20px;
+            top: 10px;
         }
         #filamentresult{
             position: absolute;
-            width: 70%;
-            height: 100%;
+            width: 900px;
+            height: 900px;
             float: left;
             left: 30%;
             border: 1px solid black;
         }
         #screen3{
+            position: relative;
             background-color: #ffce00;
-            height: 100%;
-            width: 100%;
+            height: 900px;
+            width: 1500px;
+            margin: 70px auto;
+            border: 1px red solid;
+        }
+        #api{
+            position: absolute;
+            top: 30px;
+            left: 200px;
         }
         #screen4{
+            position: relative;
             background-color: #4ac1d2;
-            height: 100%;
-            width: 100%;
+            height: 900px;
+            width: 1500px;
+            margin: 70px auto;
+            border: 1px red solid;
         }
         #screen5{
+            position: relative;
             background-color: white;
-            height: 100%;
-            width: 100%;
+            height: 900px;
+            width: 1500px;
+            margin: 70px auto;
+            border: 1px red solid;
         }
         #screen6{
+            position: relative;
             background-color: #4ac1d2;
-            height: 100%;
-            width: 100%;
+            height: 900px;
+            width: 1500px;
+            margin: 70px auto;
+            border: 1px red solid;;
         }
     </style>
 </head>
@@ -151,7 +179,7 @@
     </div>
         
     <div id="screen2">
-        <div id="filamenttext">Choose what filament color you want...</div>
+        <div id="filamenttext"><h1>Next, choose a filament color to produce...</h1> Currently NikNak's come in red, white, silver, turquoise, and navy blue!</div>
         <div id="fil">
         <img id="filpink" class="filimg" src="niknakgraphics/pinkfilament.png">
         <img id="filblue" class="filimg" src="niknakgraphics/bluefilament.png">
@@ -161,7 +189,7 @@
         hellos</div>
     </div>
     <div id="screen3">
-       <img src="niknakgraphics/beditapi.png" >
+       <img id="api" src="niknakgraphics/beditapi.png" >
     </div>
     <div id="screen4">
         <img id="printer" src="niknakgraphics/pprinter.png"> 
@@ -178,6 +206,7 @@
         for(i=0; i<6; i++){
              document.getElementById("dots").innerHTML += "<img class='dot' src='niknakgraphics/dot.png'>"
         }
+        //MOVE BEARINGS
        
     </script>
 </html>
