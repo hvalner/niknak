@@ -1,0 +1,125 @@
+	#all{
+					bbackground-image: url(topography.png);
+					margin-top:0%;
+					top: 0px;
+					bottom: 0px;
+					right: 0px;
+					left: 0px;
+					position: absolute;	
+				}
+				
+				#splash{
+					bbackground-color:blue;
+					text-align: left;
+					margin: 5%;
+					margin-top: 2%;
+					float:inherit;
+					height: 48px;
+					position: fixed;
+				}
+				
+				#splashimg{
+					margin-top: 8%;
+					width: 100%;
+					
+				}
+			
+				#nikimg{
+					height: 48px; 
+				}
+				
+				
+				ul {
+					list-style-type: none;
+					margin-top: 2%;
+					padding: 0;
+					overflow: hidden;
+					position: fixed;
+					top: 0;
+					width: 97%;
+						
+				}
+				
+				li {
+    				float: right;
+				}
+				
+				li a {
+					display: block;
+					color: #4ac1d2;
+					text-align: center;
+					padding: 14px 16px;
+					text-decoration: none;
+					font-family: "Quicksand";
+				}
+				
+				li a:hover {
+					background-color: #ffce00;
+				
+				}
+				.active {
+					background-color: #f93d6e;
+				}
+				
+				#footer{
+					background-color: white;
+					display: flex;
+					justify-content: center;
+					ppadding: 5%;
+					height: 20%;
+					align-items: center;
+					font-family: "Quicksand";
+				}
+					
+				#icon{
+					height: 50px;
+					margin: 1%;	
+				}
+				
+					
+				#flex{
+					display: flex;
+  					flex-direction: row;
+					flex-wrap: wrap;
+					align-items:center;
+					justify-content: center;
+					padding-bottom:1%;
+					margin:15%;
+					margin-bottom:1%;
+				}	
+				
+				#project{
+					background-color:RGBA(0,0,0,0);
+					width:25%;
+					height: 250px;
+					background-position: center;
+					background-repeat: no-repeat;
+					display: flex;
+  					align-items: center; 
+					justify-content: center;
+					margin: 1%;
+					box-shadow: 10px 10px;
+					position: relative;
+					box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+					padding: 20px;
+					background-color: rgba(0, 0, 0, 0);
+					color: rgba(0, 0, 0, 0);
+				
+				}
+	
+				
+				#project:hover{
+					background-color: rgba(74,193,210, 1);
+					transition-timing-function: ease;
+					transition-duration: .75s;
+					color: rgba(0, 0, 0, 1);
+					opacity: 0;
+					}
+					
+				
+				.body{
+					font-family: "Quicksand";
+					padding: 18%;
+					padding-top: 5%;
+					padding-bottom: 5%;
+}
