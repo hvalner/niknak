@@ -1,12 +1,14 @@
 <html>
+    <!-- colors: pink: #f93d6e; blue: #4ac1d2; yellow: #ffce00; -->
 <head>
     <title>NikNak Interactive Story</title>
      <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Fredoka+One|Nunito|Quicksand|Rubik+Mono+One" rel="stylesheet">
     <style>
         body{
             background-color: #4ac1d2;
-            font-family: Fredoka One, sans-serif;
-             color: white;
+            font-family: Quicksand, sans-serif;
+            font-size: 14pt;
+            color: white;
         }
         h1{
             font-family: Fredoka One, sans-serif;
@@ -24,11 +26,13 @@
             position: fixed;
             height: 20%;
             width: 2%;
-            right: 1%;
+            right: 7%;
             top: 20%;
             z-index: 100;
             bborder: 1px black solid;
         }
+        
+/*SCREEN 1*/
         #screen1{
             position: relative;
             background-color: #4ac1d2;
@@ -84,6 +88,19 @@
         #bearing3{
             width: 40%;
         }
+        #next1{
+            position: absolute;
+            right: 100px;
+            top: 300px;
+            font-family: Fredoka One, sans-serif;
+            font-size: 18pt;
+            height: 50px;
+            width: 100px;
+            background-color: white;
+            border-radius: 20px;
+            border: none;
+            color:#f93d6e; 
+        }
 /*        SCREEN 2*/
         #screen2{
             position: relative;
@@ -96,7 +113,7 @@
         #fil{
             width:30%;
             height: 100%;
-            border: 1px solid black;
+            bborder: 1px solid black;
             float: left;
         }
         .filimg{
@@ -104,19 +121,50 @@
             margin: 20px 30px;
         }
         #filamenttext{
+            font-family: Quicksand, serif;
             position: absolute;
             color: grey;
-            right: 20px;
+            left: 350px;
             top: 10px;
         }
         #filamentresult{
-            position: absolute;
+            position: relative;
             width: 900px;
             height: 900px;
             float: left;
-            left: 30%;
-            border: 1px solid black;
+            right: 10px;
+            bborder: 1px solid black;
         }
+        #filimgresult{
+            position: absolute;
+            width: 500px;
+            bottom: 100px;
+            left: 10px;
+        }
+        #fildesc{
+            position: relative;
+            left: 1000px;
+            top: 300px;
+            border: 1px red solid;
+            width: 500px;
+            height: 500px;
+            
+        }
+        #next2{
+            position: absolute;
+            bottom: 10px;
+            right: 100px;
+            font-family: Fredoka One, sans-serif;
+            font-size: 18pt;
+            height: 50px;
+            width: 100px;
+            background-color: grey;
+            border-radius: 20px;
+            border: none;
+            color: white; 
+        }
+        
+/*SCREEN 3*/
         #screen3{
             position: relative;
             background-color: #ffce00;
@@ -126,10 +174,35 @@
             border: 1px red solid;
         }
         #api{
-            position: absolute;
-            top: 30px;
-            left: 200px;
+            margin: 30px;
+            width: 1100px;
+            float: left;
         }
+        #apitext{
+            float: left;
+            margin: 10px;
+        }
+        #apispinner{
+            position: absolute;
+            left: 600px;
+            top: 300px;
+            width: 200px;
+        }
+        #next3{
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+            font-family: Fredoka One, sans-serif;
+            font-size: 18pt;
+            height: 50px;
+            width: 100px;
+            background-color: #4ac1d2;
+            border-radius: 20px;
+            border: none;
+            color: white; 
+        }
+        
+/*  SCREEN 4      */
         #screen4{
             position: relative;
             background-color: #4ac1d2;
@@ -138,6 +211,29 @@
             margin: 70px auto;
             border: 1px red solid;
         }
+        #printer{
+            margin: 100px 200px;
+        }
+        #printertext{
+            position: absolute;
+            right: 100px;
+            top: 100px;
+        }
+        #next4{
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+            font-family: Fredoka One, sans-serif;
+            font-size: 18pt;
+            height: 50px;
+            width: 100px;
+            background-color: #f93d6e;
+            border-radius: 20px;
+            border: none;
+            color: white; 
+        }
+        
+/*    SCREEN 5*/
         #screen5{
             position: relative;
             background-color: white;
@@ -146,6 +242,26 @@
             margin: 70px auto;
             border: 1px red solid;
         }
+        #hammer{
+            margin: 110px 200px;
+        }
+        #constructiontext{
+            color: #f93d6e;
+        }
+        #next5{
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+            font-family: Fredoka One, sans-serif;
+            font-size: 18pt;
+            height: 50px;
+            width: 100px;
+            background-color: #f93d6e;
+            border-radius: 20px;
+            border: none;
+            color: white; 
+        }
+
         #screen6{
             position: relative;
             background-color: #4ac1d2;
@@ -154,13 +270,34 @@
             margin: 70px auto;
             border: 1px red solid;;
         }
+        #hands{
+            float: left;
+            margin: 40px 100px;
+        }
+        #handstext{
+            float: left;
+            margin: 40px 50px;
+        }
+        #next6{
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+            font-family: Fredoka One, sans-serif;
+            font-size: 18pt;
+            height: 50px;
+            width: 400px;
+            background-color: #f93d6e;
+            border-radius: 20px;
+            border: none;
+            color: white; 
+        }
     </style>
 </head>
 <!--   DRAG AND DROP - USE FOR BEARINGS http://www.webreference.com/programming/javascript/mk/column2/index.html-->
 <body>
-    <div id="dots">
-    </div>
+    
     <div id="screen1">
+<!--        <div id="dots"></div>-->
         <div id="bearingtext"><h1>Step 1: Order Bearings</h1>
             We source our bearings directly from factories in China<br>so we can get the best value on high quality parts.
         </div>
@@ -172,41 +309,85 @@
         <img id="bearing2" src="niknakgraphics/bearingf.png">
         <img id="bearing3" src="niknakgraphics/bearingf.png">
             <br><br>
-        Pick me up!
+        Navigate me!
         </div>
         <img id="california" src="niknakgraphics/cali.png">
-        <input type="image" alt="next" src="niknakgraphics/dot.png">
+        <button id="next1"> Next </button>
+<!--        <input type="image" alt="next" src="niknakgraphics/dot.png">-->
     </div>
         
+    
     <div id="screen2">
-        <div id="filamenttext"><h1>Next, choose a filament color to produce...</h1> Currently NikNak's come in red, white, silver, turquoise, and navy blue!</div>
+        <div id="filamenttext"><h1>Step 2: Choose a Filament Color</h1> Currently our spinners come in red, white, silver, turquoise, and navy blue!</div>
         <div id="fil">
         <img id="filpink" class="filimg" src="niknakgraphics/pinkfilament.png">
         <img id="filblue" class="filimg" src="niknakgraphics/bluefilament.png">
         <img id="filyellow" class="filimg" src="niknakgraphics/yellowfilament.png">
         </div>
         <div id="filamentresult">
-        hellos</div>
+            <img id="filimgresult" src="niknakgraphics/pinkfilament.png" alt="Your filament of choice">
+        </div>
+        
+        <div id="fildesc">
+            <button id="next2"> Next </button>   
+        </div>
+       
     </div>
+    
+    
     <div id="screen3">
        <img id="api" src="niknakgraphics/beditapi.png" >
+        <img id="apispinner" src="niknakgraphics/bedit.png">
+        <div id="apitext"><h1>Step 3: Design</h1> Scale this sample API for a perfect fit!</div>
+        <button id="next3"> Next </button>   
+        
     </div>
+    
+    
     <div id="screen4">
         <img id="printer" src="niknakgraphics/pprinter.png"> 
+        <div id="printertext"><h1>Step 4: Print!</h1> Toggle to determine how many spinners you want to print (max of 3)
+        </div>
+        <button id="next4"> Print! </button>   
+        
     </div>
+    
+    
     <div id="screen5">
         <img id="hammer" src="niknakgraphics/phammerset.png">
+        <div id="constructiontext"><h1>Step 5: Construction</h1></div>
+        <button id="next5"> Next </button>  
     </div>
+    
+    
     <div id="screen6">
-        <img id="hammer" src="niknakgraphics/handhold.png">
+        <img id="hands" src="niknakgraphics/handhold.png">
+        <div id="handtext"><h1>Step 6: Customers</h1> Spin away!</div>
+        <button id="next6"> Order Your Own! </button>  
+        
     </div>
 </body>
+    <script src="js.cookie.js"></script>
+    <script src="jquery-2.1.3.min.js"></script>
     <script>
         //SIDE BARS
-        for(i=0; i<6; i++){
-             document.getElementById("dots").innerHTML += "<img class='dot' src='niknakgraphics/dot.png'>"
-        }
+//        for(i=0; i<6; i++){
+//             document.getElementById("dots").innerHTML += "<img class='dot' src='niknakgraphics/dot.png'>"
+//        }
         //MOVE BEARINGS
+        document.getElementById("bearings").addEventListener("click", function(){
+        });
        
+        //ANIMATE First Screen
+       $(document).ready(function(){
+           $('bearingtext').css("visiblity", "hidden");
+       });
+        
+        //MOVE NEXT
+//        document.getElementById("next1").addEventListener("click", function(){
+//            document.getElementById("screen1").innerHTML = '<div id="filamenttext"><h1>Step 2: Choose a Filament Color</h1> Currently our spinners come in red, white, silver, turquoise, and navy blue!</div><div id="fil"><img id="filpink" class="filimg" src="niknakgraphics/pinkfilament.png"><img id="filblue" class="filimg" src="niknakgraphics/bluefilament.png"><img id="filyellow" class="filimg" src="niknakgraphics/yellowfilament.png"></div><div id="filamentresult"><img id="filimgresult" src="niknakgraphics/pinkfilament.png" alt="Your filament of choice"></div><div id="fildesc"><button id="next2"> Next </button></div>'
+//        })
+        
+        
     </script>
 </html>
