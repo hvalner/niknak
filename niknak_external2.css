@@ -1,5 +1,5 @@
 				#all{
-					background-image: url(topography.png);
+					bbackground-image: url(topography.png);
 					margin-top:0%;
 					top: 0px;
 					bottom: 0px;
@@ -107,15 +107,7 @@
 				
 				}
 	
-				
-				#project:hover{
-					background-color: rgba(74,193,210, 1);
-					transition-timing-function: ease;
-					transition-duration: .75s;
-					color: rgba(0, 0, 0, 1);
-					opacity: 0;
-					}
-					
+			
 				
 				.body{
 					font-family: "Quicksand";
@@ -123,3 +115,21 @@
 					padding-top: 5%;
 					padding-bottom: 5%;
 }
+			#about{
+					background-color:RGBA(0,0,0,0);
+					width:25%;
+					height: 250px;
+					background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+					background-position: center;
+					background-repeat: no-repeat;
+					display: flex;
+  					align-items: center; 
+					justify-content: center;
+					margin: 1%;
+					box-shadow: 10px 10px;
+					position: relative;
+					padding: 25px;
+					background-color: rgba(0, 0, 0, 0);
+					color: rgba(0, 0, 0, 0);
+					
+				}

@@ -11,139 +11,15 @@ font-family: 'Fredoka One', cursive;
 <html>
 	<title> Nik Nak </title>
 		<head> <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Fredoka+One|Nunito|Quicksand|Rubik+Mono+One" rel="stylesheet">
-			<style>
-			
-				#all{
-					bbackground-image: url(topography.png);
-					margin-top:0%;
-					top: 0px;
-					bottom: 0px;
-					right: 0px;
-					left: 0px;
-					position: absolute;
-					
-					
-				}
-				
-				#splash{
-					bbackground-color:blue;
-					text-align: left;
-					margin: 5%;
-					margin-top: 2%;
-					float:inherit;
-					height: 48px;
-					position: fixed;
-				}
-				
-				#splashimg{
-					margin-top: 8%;
-					width: 100%;
-					
-				}
-			
-				#nikimg{
-					height: 48px;
-				}
-				
-				
-				ul {
-					list-style-type: none;
-					margin-top: 2%;
-					padding: 0;
-					overflow: hidden;
-					position: fixed;
-					top: 0;
-					width: 97%;
-						
-				}
-				
-				li {
-    				float: right;
-				}
-				
-				li a {
-					display: block;
-					color: #4ac1d2;
-					text-align: center;
-					padding: 14px 16px;
-					text-decoration: none;
-					font-family: "Quicksand";
-				}
-				
-				li a:hover {
-					background-color: #ffce00;
-				
-				}
-				.active {
-					background-color: #f93d6e;
-				}
-				
-				#footer{
-					background-color: gray;
-					display: flex;
-					justify-content: center;
-					ppadding: 5%;
-					height: 20%;
-					align-items: center;
-					font-family: "Quicksand";
-					}
-					
-				#icon{
-					height: 50px;
-					margin: 1%;	
-				}
-				
-					
-				#flex{
-					display: flex;
-  					flex-direction: row;
-					flex-wrap: wrap;
-					align-items:center;
-					justify-content: center;
-					padding-bottom:1%;
-					margin:15%;
-					margin-bottom:1%;
-					
-					
-					
-				}	
-				
-				#project{
-					background-color:RGBA(0,0,0,0);
-					width:25%;
-					height: 250px;
-					background-position: center;
-					background-repeat: no-repeat;
-					display: flex;
-  					align-items: center; 
-					justify-content: center;
-					margin: 1%;
-					box-shadow: 10px 10px;
-					position: relative;
-					box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-					padding: 20px;
-					background-color: rgba(0, 0, 0, 0);
-					color: rgba(0, 0, 0, 0);
-				
-				}
-	
-				
-				#project:hover{
-					background-color: rgba(74,193,210, 1);
-					transition-timing-function: ease;
-					transition-duration: .75s;
-					color: rgba(0, 0, 0, 1);
-					opacity: 0;
-					}
-					
-				
-				.body{
-					font-family: "Quicksand";
-					padding: 18%;
-					padding-top: 5%;
-					padding-bottom: 5%;
-				}
-			</style>
+		
+		<link id="pagestyle" rel="stylesheet" type="text/css" href="niknak_external.css">
+
+		<script>
+			function swapStyleSheet(sheet){
+				document.getElementById('pagestyle').setAttribute('href', sheet);
+}
+</script>
+
 	</head>
 	<body>
 	
@@ -154,20 +30,20 @@ font-family: 'Fredoka One', cursive;
 					
 <div>
 <ul>
-  <li><a href="niknakprivatesummary.html">Private</a></li>
-<li><a href="niknakmainassignment.html">Assignment</a></li>
-    <li><a href="niknakprivatedeal.html">Pitch</a></li>
-			  <li><a href="niknakmainaboutus_bts.html">About Us</a></li>
-			  <li><a  class="active" href="niknakmainproduct_1.html">Product</a></li>	
-			  <li><a href="niknakmainhome.html">Home</a></li>
+	<li><a href="niknakprivatesummary.html">Private</a></li>
+	<li><a href="niknakmainassignment.html">Assignment</a></li>
+	<li><a href="niknakprivatedeal.html">Pitch</a></li>
+	<li><a href="niknakmainaboutus_bts.html">About Us</a></li>
+	<li><a  class="active" href="niknakmainproduct_1.html">Product</a></li>	
+	<li><a href="niknakmainhome.html">Home</a></li>
 </ul>
 </div>
 
 	<div id="flex">
 	
-	<div id="project" style="background-image: url(fidget_spinner_toys.jpg); background-size:;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi mi, tempus vitae quam at, porttitor rutrum magna. Nam purus ligula, placerat in lacus molestie, rutrum tempus tellus.</div>
-	<div id="project" style="background-image: url(fidget_spinner_toys.jpg); background-size:;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi mi, tempus vitae quam at, porttitor rutrum magna. Nam purus ligula, placerat in lacus molestie, rutrum tempus tellus.</div>
-	<div id="project" style="background-image: url(fidget_spinner_toys.jpg); background-size:;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi mi, tempus vitae quam at, porttitor rutrum magna. Nam purus ligula, placerat in lacus molestie, rutrum tempus tellus.</div>
+	<div id="project" style="background-image: url(fidget_spinner_toys.jpg); background-size:;"></div>
+	<div id="project" style="background-image: url(fidget_spinner_toys.jpg); background-size:;"></div>
+	<div id="project" style="background-image: url(fidget_spinner_toys.jpg); background-size:;"></div>
 	
 	</div><!--splash-->
 	
@@ -185,7 +61,11 @@ font-family: 'Fredoka One', cursive;
 	</div>
 	
 	
-	<div id="footer">Follow us on<img src="fb-art.png" id="icon" > </div>
+	<div id="footer">Follow us on<img src="fb-art.png" id="icon" >		
+		<button onclick="swapStyleSheet('niknak_external.css')">Default Style Sheet</button>
+		<button onclick="swapStyleSheet('niknak_external1.css')">1 Style Sheet</button>
+		<button onclick="swapStyleSheet('niknak_external2.css')">2 Style Sheet</button>
+		 </div>
 	</div>
 	</body>
 </html>

@@ -1,4 +1,5 @@
-	#all{
+	
+			#all{
 					bbackground-image: url(topography.png);
 					margin-top:0%;
 					top: 0px;
@@ -22,6 +23,14 @@
 					margin-top: 8%;
 					width: 100%;
 					
+				}
+
+				#head{
+					background-color:white;
+					position: fixed;	
+					height: 115px;
+					width: 100%;
+					margin: 0;
 				}
 			
 				#nikimg{
@@ -62,7 +71,7 @@
 				}
 				
 				#footer{
-					background-color: white;
+					bbackground-color: white;
 					display: flex;
 					justify-content: center;
 					ppadding: 5%;
@@ -85,7 +94,8 @@
 					justify-content: center;
 					padding-bottom:1%;
 					margin:15%;
-					margin-bottom:1%;
+					margin-bottom:0%;
+					z-index: -10;
 				}	
 				
 				#project{
@@ -107,19 +117,31 @@
 				
 				}
 	
-				
-				#project:hover{
-					background-color: rgba(74,193,210, 1);
-					transition-timing-function: ease;
-					transition-duration: .75s;
-					color: rgba(0, 0, 0, 1);
-					opacity: 0;
-					}
-					
-				
 				.body{
 					font-family: "Quicksand";
 					padding: 18%;
 					padding-top: 5%;
 					padding-bottom: 5%;
 }
+
+			#about{
+					background-color:RGBA(0,0,0,0);
+					width:25%;
+					height: 250px;
+					background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+					background-position: center;
+					background-repeat: no-repeat;
+					display: flex;
+  					align-items: center; 
+					justify-content: center;
+					margin: 1%;
+					box-shadow: 10px 10px;
+					position: relative;
+					padding: 25px;
+					background-color: rgba(0, 0, 0, 0);
+					color: rgba(0, 0, 0, 0);
+					
+				}
+			#assignment{
+					margin-top:5%;
+				}
