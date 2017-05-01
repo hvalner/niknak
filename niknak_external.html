@@ -9,24 +9,20 @@ font-family: 'Fredoka One', cursive;
 <!-- colors: pink: #f93d6e; blue: #4ac1d2; yellow: #ffce00; -->
 
 <html>
+    <head>
 	<title> Nik Nak </title>
-		<head>
 		
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="niknak_external.css">
 			
-		<link id="pagestyle" rel="stylesheet" type="text/css" href="niknak_external.css">
-
-		<script>
-			function swapStyleSheet(sheet){
-				document.getElementById('pagestyle').setAttribute('href', sheet);
-}
-</script>
-			<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+<!--    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>-->
   <!-- uncomment lines below to include extra p5 libraries -->
   <!--<script language="javascript" src="libraries/p5.dom.js"></script>-->
   <!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
-  <script language="javascript" type="text/javascript" src="sketch3.js"></script>
+<!--  <script language="javascript" type="text/javascript" src="sketch3.js"></script>-->
   <!-- this line removes any default padding and style. you might only need one of these values set. -->
 
+=======
+>>>>>>> Stashed changes
 	</head>
 	<body>
 	
@@ -50,10 +46,54 @@ font-family: 'Fredoka One', cursive;
 <div id="splashimgbox"> <img src="garage.jpg" id="splashimg" ></div>
 	
 	<div id="footer">Follow us on<img src="fb-art.png" id="icon" >		
-		<button onclick="swapStyleSheet('niknak_external.css')">Default Style Sheet</button>
-		<button onclick="swapStyleSheet('niknak_external1.css')">1 Style Sheet</button>
-		<button onclick="swapStyleSheet('niknak_external2.css')">2 Style Sheet</button>
+		<button id="style1">Default Style Sheet</button>
+		<button id="style2">1 Style Sheet</button>
+		<button id="style3">2 Style Sheet</button>
+<!--		<button id="test">Test</button>-->
+        
 		 </div>
 	</div>
 	</body>
+    
+    <!-- COOKIE BIDNESS -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="js.cookie.js"></script>
+     <script>
+         
+        $("document").ready(function(){
+            //SET COOKIE named "style"  
+            $("#style1").on("click", function(){
+                sheet = Cookies.set("style", "1");
+                $('#pagestyle').attr("href","niknak_external.css");
+//                alert(sheet);
+            });
+            $("#style2").on("click", function(){
+                sheet = Cookies.set("style", "2");
+                $('#pagestyle').attr("href", "niknak_external1.css");
+                
+//                alert(sheet);
+            });
+            $("#style3").on("click", function(){
+                sheet = Cookies.set("style", "3");
+                $('#pagestyle').attr("href", "niknak_external2.css");
+//                alert(sheet);
+            });
+            
+            //READ COOKIE 
+            what = parseFloat(Cookies.get("style"));
+            var sheet= what;
+            
+            //LOAD STYLE
+            if(sheet == 1){
+                $('#pagestyle').attr("href", "niknak_external.css");
+            }
+            if(sheet == 2){
+                $('#pagestyle').attr("href", "niknak_external1.css");
+            }
+            if(sheet == 3){
+                $('#pagestyle').attr("href", "niknak_external2.css");
+            }
+        });
+    </script>
 </html>
