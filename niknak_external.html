@@ -13,11 +13,7 @@ font-family: 'Fredoka One', cursive;
     <head>
 	<title> Nik Nak </title>
 	
-<link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Fredoka+One|Nunito|Quicksand|Rubik+Mono+One" rel="stylesheet">	
-    <link id="pagestyle" rel="stylesheet" type="text/css" href="niknak_external.css">
-	
-			
-<Updated upstream<!--     
+<link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Fredoka+One|Nunito|Quicksand|Rubik+Mono+One" rel="stylesheet">	     
 		
   <script language="javascript" type="text/javascript" src="p5.js"></script>
   <script language="javascript" type="text/javascript" src="sketch3.1.js"></script>
@@ -29,10 +25,7 @@ font-family: 'Fredoka One', cursive;
 				document.getElementById('pagestyle').setAttribute('href', sheet);
 }
 </script>
->>>>>>> Stashed changes
-
-=======
->>>>>>> Stashed changes
+		
 	</head>
 	<body>
 	
@@ -57,9 +50,9 @@ font-family: 'Fredoka One', cursive;
 <div id="splashimgbox"> <img src="garage.jpg" id="splashimg" ></div>
 	
 	<div id="footer">Follow us on<img src="fb-art.png" id="icon" >		
-		<button id="style1">Default Style Sheet</button>
-		<button id="style2">1 Style Sheet</button>
-		<button id="style3">2 Style Sheet</button>
+		<button id="style1">Classic</button>
+		<button id="style2">Eco</button>
+		<button id="style3">Accessible</button>
 <!--		<button id="test">Test</button>-->
         
 		 </div>
@@ -78,17 +71,23 @@ font-family: 'Fredoka One', cursive;
                 sheet = Cookies.set("style", "1");
                 $('#pagestyle').attr("href","niknak_external.css");
 //                alert(sheet);
+				bgfidg = 255;
+				reset = true;
             });
             $("#style2").on("click", function(){
                 sheet = Cookies.set("style", "2");
                 $('#pagestyle').attr("href", "niknak_external1.css");
                 
 //                alert(sheet);
+				bgfidg = 0;
+				reset = true;
             });
             $("#style3").on("click", function(){
                 sheet = Cookies.set("style", "3");
                 $('#pagestyle').attr("href", "niknak_external2.css");
 //                alert(sheet);
+				bgfidg = 255;
+				reset = true;
             });
             
             //READ COOKIE 

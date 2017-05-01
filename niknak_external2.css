@@ -22,24 +22,25 @@
 				}
 				
 				#splash{
-					bbackground-color:blue;
+					
 					text-align: left;
-					margin: 5%;
-					margin-top: 2%;
+					margin: 50px;
+					margin-top: 30px;
 					float:inherit;
 					height: 48px;
 					position: fixed;
+						z-index:999;
 				}
 				
 				#splashimg{
-					margin-top: 8%;
+					margin-top: 10px;
 					width: 100%;
-					
-				}
+						z-index:999;
+}
 			
 				#nikimg{
 					height: 48px;
-					margin-top: 8%;
+					z-index:999;
 				}
 				
 				
