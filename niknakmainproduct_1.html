@@ -20,15 +20,19 @@ font-family: 'Fredoka One', cursive;
 }
 </script>
 
+  <script language="javascript" type="text/javascript" src="p5.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch3.1.js"></script>
+	
 	</head>
 	<body>
 	
 
 <div id="all">
-	
+<div id="head">	
 <div id="splash"><img src="niknaklogo_color@4x.png" id="nikimg" ></div>
-					
-<div>
+	
+<div id="sketch31" style="display:block;margin-left:35%"></div>
+<div>	
 <ul>
 	<li><a href="niknakprivatesummary.html">Private</a></li>
 	<li><a href="niknakmainassignment.html">Assignment</a></li>
@@ -38,7 +42,7 @@ font-family: 'Fredoka One', cursive;
 	<li><a href="niknakmainhome.html">Home</a></li>
 </ul>
 </div>
-
+</div>
 	<div id="flex">
 	
 	<div id="project" style="background-image: url(fidget_spinner_toys.jpg); background-size:;"></div>
@@ -62,9 +66,9 @@ font-family: 'Fredoka One', cursive;
 	
 	
 	<div id="footer">Follow us on<img src="fb-art.png" id="icon" >		
-		<button onclick="swapStyleSheet('niknak_external.css')">Default Style Sheet</button>
-		<button onclick="swapStyleSheet('niknak_external1.css')">1 Style Sheet</button>
-		<button onclick="swapStyleSheet('niknak_external2.css')">2 Style Sheet</button>
+		<button onclick="swapStyleSheet('niknak_external.css'); bgfidg = 255; reset = true">Default Style Sheet</button>
+		<button onclick="swapStyleSheet('niknak_external1.css'); bgfidg = 0; reset = true">1 Style Sheet</button>
+		<button onclick="swapStyleSheet('niknak_external2.css'); bgfidg = 255; reset = true">2 Style Sheet</button>
 		 </div>
 	</div>
 	</body>

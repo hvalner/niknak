@@ -1,6 +1,13 @@
-	
+	@font-face {
+	font-family: 'OpenDyslexic';
+	src: url('OpenDyslexic-Regular.eot');
+	src: url('OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'),
+		url('OpenDyslexic-Regular.woff') format('woff'),
+		url('OpenDyslexic-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 			#all{
-					bbackground-image: url(topography.png);
 					margin-top:0%;
 					top: 0px;
 					bottom: 0px;
@@ -10,18 +17,20 @@
 				}
 				
 				#splash{
-					bbackground-color:blue;
+					
 					text-align: left;
 					margin: 5%;
 					margin-top: 2%;
 					float:inherit;
 					height: 48px;
 					position: fixed;
+						z-index:999;
 				}
 				
 				#splashimg{
 					margin-top: 8%;
 					width: 100%;
+						z-index:999;
 					
 				}
 
@@ -31,6 +40,7 @@
 					height: 115px;
 					width: 100%;
 					margin: 0;
+					z-index:998;
 				}
 			
 				#nikimg{
@@ -46,6 +56,7 @@
 					position: fixed;
 					top: 0;
 					width: 97%;
+					z-index:999;
 						
 				}
 				
@@ -96,6 +107,7 @@
 					margin:15%;
 					margin-bottom:0%;
 					z-index: -10;
+				
 				}	
 				
 				#project{
@@ -126,7 +138,7 @@
 
 			#about{
 					background-color:RGBA(0,0,0,0);
-					width:25%;
+					width:15%;
 					height: 250px;
 					background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 					background-position: center;
@@ -145,3 +157,18 @@
 			#assignment{
 					margin-top:5%;
 				}
+
+			#sketch31{
+					left: 0px;
+					right: 0px;
+					z-index: 999;
+					position: fixed;
+					top: 15px;
+	
+					}
+			canvas {
+					z-index:999;
+				
+				
+				}
+}

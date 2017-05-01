@@ -8,20 +8,20 @@ font-family: 'Fredoka One', cursive;
 -->
 <!-- colors: pink: #f93d6e; blue: #4ac1d2; yellow: #ffce00; -->
 
+
 <html>
     <head>
 	<title> Nik Nak </title>
-		
+	
+<link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Fredoka+One|Nunito|Quicksand|Rubik+Mono+One" rel="stylesheet">	
     <link id="pagestyle" rel="stylesheet" type="text/css" href="niknak_external.css">
+	
 			
-<<<<<<< Updated upstream
-<!--    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>-->
-  <!-- uncomment lines below to include extra p5 libraries -->
-  <!--<script language="javascript" src="libraries/p5.dom.js"></script>-->
-  <!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
-<!--  <script language="javascript" type="text/javascript" src="sketch3.js"></script>-->
-  <!-- this line removes any default padding and style. you might only need one of these values set. -->
-=======
+<Updated upstream<!--     
+		
+  <script language="javascript" type="text/javascript" src="p5.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch3.1.js"></script>
+
 		<link id="pagestyle" rel="stylesheet" type="text/css" href="niknak_external.css">
 
 		<script>
@@ -39,21 +39,21 @@ font-family: 'Fredoka One', cursive;
 
 <div id="all">
 
-<div id="head">
+<div id="head">	
 <div id="splash"><img src="niknaklogo_color@4x.png" id="nikimg" ></div>
-					
-<div>
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#pitch">Pitch</a></li>
-  <li><a href="#bts">Behind the Scenes</a></li>
-  <li><a href="#about">About Us</a></li>	
-  <li><a href="#product">Product</a></li>
 	
+<div id="sketch31" style="display:block;margin-left:35%"></div>
+<div>	
+<ul>
+	<li><a href="niknakprivatesummary.html">Private</a></li>
+	<li><a href="niknakmainassignment.html">Assignment</a></li>
+	<li><a href="niknakprivatedeal.html">Pitch</a></li>
+	<li><a href="niknakmainaboutus_bts.html">About Us</a></li>
+	<li><a  class="active" href="niknakmainproduct_1.html">Product</a></li>	
+	<li><a href="niknakmainhome.html">Home</a></li>
 </ul>
 </div>
 </div>
-	
 <div id="splashimgbox"> <img src="garage.jpg" id="splashimg" ></div>
 	
 	<div id="footer">Follow us on<img src="fb-art.png" id="icon" >		
@@ -98,12 +98,15 @@ font-family: 'Fredoka One', cursive;
             //LOAD STYLE
             if(sheet == 1){
                 $('#pagestyle').attr("href", "niknak_external.css");
+				bgfidg = 255;
             }
             if(sheet == 2){
                 $('#pagestyle').attr("href", "niknak_external1.css");
+				bgfidg = 0;
             }
             if(sheet == 3){
                 $('#pagestyle').attr("href", "niknak_external2.css");
+				bgfidg = 255;
             }
         });
     </script>

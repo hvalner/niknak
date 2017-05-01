@@ -1,4 +1,13 @@
-	/*	"All Page" CSS	*/
+@font-face {
+	font-family: 'OpenDyslexic';
+	src: url('OpenDyslexic-Regular.eot');
+	src: url('OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'),
+		url('OpenDyslexic-Regular.woff') format('woff'),
+		url('OpenDyslexic-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+/*	"All Page" CSS	*/
 				#all{
 					bbackground-image: url(topography.png);
 					margin-top:0%;
@@ -11,17 +20,19 @@
 				}
 				
 				#splash{
-					bbackground-color:blue;
 					text-align: left;
 					margin: 5%;
 					margin-top: 2%;
 					float:inherit;
 					height: 48px;
 					position: fixed;
+					z-index:999;
 				}
 				
 				#splashimg{
-					width: 50%;
+					margin-top: 8%;
+					width: 100%;
+					z-index:999;
 					
 				}
 
@@ -31,10 +42,14 @@
 					height: 115px;
 					width: 100%;
 					margin: 0;
+					z-index: 10;
+					z-index:998;
 				}
 			
 				#nikimg{
-					height: 48px; 
+					height: 48px;
+					z-index:999;
+					
 				}
 				
 				
@@ -46,6 +61,7 @@
 					position: fixed;
 					top: 0;
 					width: 97%;
+					z-index:999;
 						
 				}
 				
@@ -78,7 +94,7 @@
 					height: 20%;
 					align-items: center;
 					font-family: "Quicksand";
-					color: white;
+					color: rgb(150,150,150);
 				}
 					
 				#icon{
@@ -93,9 +109,10 @@
 					flex-wrap: wrap;
 					align-items:center;
 					justify-content: center;
-					padding-bottom:1%;
-					margin:15%;
-					margin-bottom:1%;
+					margin-top:15%;
+					margin-bottom:0%;
+					background-color:black;
+					z-index: -10;
 				}	
 				
 				#project{
@@ -119,7 +136,7 @@
 		
 				
 				.body{
-					color: white;
+					color: rgb(150,150,150);
 					background-color: black;
 					font-family: "Quicksand";
 					padding: 18%;
@@ -130,7 +147,7 @@
 /*	"About Page" CSS	*/
 				#about{
 					background-color:RGBA(0,0,0,0);
-					width:25%;
+					width:12%;
 					height: 250px;
 					background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 					background-position: center;
@@ -151,3 +168,17 @@
 					margin-top:5%;
 				}
 		
+	#sketch31{
+					left: 0px;
+					right: 0px;
+					z-index: 999;
+					position: fixed;
+					top: 15px;
+	
+					}
+			canvas {
+					z-index:999;
+				
+				
+				}
+}
