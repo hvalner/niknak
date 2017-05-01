@@ -1,0 +1,289 @@
+<!--
+font-family: 'Bungee Shade', cursive;
+font-family: 'Bungee', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Rubik Mono One', sans-serif;
+font-family: 'Fredoka One', cursive; 
+-->
+<!-- colors: pink: #f93d6e; blue: #4ac1d2; yellow: #ffce00; -->
+
+<html>
+	<title>Nik Nak | About Us</title>
+		<head> 
+			<link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Fredoka+One|Nunito|Quicksand|Rubik+Mono+One" rel="stylesheet">
+				
+			<link id="pagestyle" rel="stylesheet" type="text/css" href="niknak_external.css">
+
+						<script>
+							function swapStyleSheet(sheet){
+								document.getElementById('pagestyle').setAttribute('href', sheet);
+				}
+						</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+
+			<script src="chart/RangeSlider-all.min.js"></script>
+			<link rel="stylesheet" href="chart/RangeSlider-all.min.css">
+
+			<style>
+				#chart {
+					padding-top: 100px;
+					margin-bottom: 100px;
+					width: 35%;
+					height: auto;
+					margin:auto;
+				}
+			</style>
+		</head>
+	<body>
+	
+
+<div id="all">
+	<div id="splash"><img src="niknaklogo_color@4x.png" id="nikimg" ></div>					
+		<div>
+			<ul>
+			  <li><a href="niknakprivatesummary.html">Private</a></li>
+			  <li><a href="niknakmainassignment.html">Assignment</a></li>
+			  <li><a href="niknakprivatedeal.html">Pitch</a></li>
+			  <li><a class="active" href="niknakmainaboutus_bts.html">About Us</a></li>
+			  <li><a href="niknakmainproduct_1.html">Product</a></li>	
+			  <li><a href="niknakmainhome.html">Home</a></li>
+			</ul>
+		</div>
+
+	    <div id="chart">
+	    <p> </p>
+		<canvas id="myChart" width="400" height="400"></canvas>
+		</div>
+	
+	<div id="footer">Follow us on<img src="fb-art.png" id="icon" >		
+		<button onclick="swapStyleSheet('niknak_external.css')">Default Style Sheet</button>
+		<button onclick="swapStyleSheet('niknak_external1.css')">1 Style Sheet</button>
+		<button onclick="swapStyleSheet('niknak_external2.css')">2 Style Sheet</button>
+		 </div>
+	</div>
+	
+	<script>
+
+var ctx = document.getElementById("myChart");
+
+	
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        datasets: [{
+            label: 'NikNak Total Rev',
+                              backgroundColor: [
+                'rgba(200, 200, 80, 0.2)'
+            ],   
+            data: [{
+                x: "2017-04-01",
+                y: 16
+            }, {
+                x: "2017-04-02",
+                y: 26
+            }, {
+                x: "2017-04-03",
+                y: 46
+            }, {
+                x: "2017-04-04",
+                y: 146
+            }, {
+                x: "2017-04-05",
+                y: 161
+            }, {
+                x: "2017-04-06",
+                y: 221
+            }, {
+                x: "2017-04-07",
+                y: 236
+            }, {
+                x: "2017-04-08",
+                y: 241
+            }, {            	
+                x: "2017-04-09",
+                y: 251
+            }, {
+                x: "2017-04-10",
+                y: 258
+            }, {
+                x: "2017-04-11",
+                y: 287
+            }, {
+                x: "2017-04-12",
+                y: 302
+            }, {
+                x: "2017-04-17",
+                y: 307
+            }, {
+                x: "2017-04-18",
+                y: 312
+            }, {
+                x: "2017-04-19",
+                y: 342
+            }, {
+                x: "2017-04-20",
+                y: 354
+            }, {
+                x: "2017-04-24",
+                y: 369
+            }, {            	
+                x: "2017-04-25",
+                y: 386
+            }, {
+                x: "2017-04-26",
+                y: 394
+            }, {
+                x: "2017-04-27",
+                y: 399
+            }]
+        }, {
+            label: 'NikNak Gross Profit',
+                  backgroundColor: [
+                'rgba(255, 99, 132, 0.2)'
+            ],      
+            data: [{
+                x: "2017-03-26",
+                y: -88
+            }, {
+                x: "2017-04-01",
+                y: -72
+            }, {
+                x: "2017-04-02",
+                y: -62
+            }, {
+                x: "2017-04-03",
+                y: -42
+            }, {
+                x: "2017-04-04",
+                y: 58
+            }, {
+                x: "2017-04-05",
+                y: 73
+            }, {
+                x: "2017-04-06",
+                y: 133
+            }, {
+                x: "2017-04-07",
+                y: 148
+            }, {
+                x: "2017-04-08",
+                y: 153
+            }, {            	
+                x: "2017-04-09",
+                y: 163
+            }, {
+                x: "2017-04-10",
+                y: 82
+            }, {
+                x: "2017-04-11",
+                y: 111
+            }, {
+                x: "2017-04-12",
+                y: 126
+            }, {
+                x: "2017-04-17",
+                y: 131
+            }, {
+                x: "2017-04-18",
+                y: 136
+            }, {
+                x: "2017-04-19",
+                y: 166
+            }, {
+                x: "2017-04-20",
+                y: 178
+            }, {
+                x: "2017-04-24",
+                y: 193
+            }, {            	
+                x: "2017-04-25",
+                y: 213
+            }, {
+                x: "2017-04-26",
+                y: 218
+            }, {
+                x: "2017-04-27",
+                y: 223
+            }]
+        }, {
+        	label: 'NikNak Operating Profits',
+                              backgroundColor: [
+                'rgba(100, 100, 80, 0.2)'
+            ],   
+            data: [{
+                x: "2017-04-01",
+                y: 16
+            }, {
+                x: "2017-04-02",
+                y: 26
+            }, {
+                x: "2017-04-03",
+                y: 46
+            }, {
+                x: "2017-04-04",
+                y: 146
+            }, {
+                x: "2017-04-05",
+                y: 161
+            }, {
+                x: "2017-04-06",
+                y: 221
+            }, {
+                x: "2017-04-07",
+                y: 236
+            }, {
+                x: "2017-04-08",
+                y: 241
+            }, {            	
+                x: "2017-04-09",
+                y: 251
+            }, {
+                x: "2017-04-10",
+                y: 258
+            }, {
+                x: "2017-04-11",
+                y: 287
+            }, {
+                x: "2017-04-12",
+                y: 302
+            }, {
+                x: "2017-04-17",
+                y: 307
+            }, {
+                x: "2017-04-18",
+                y: 312
+            }, {
+                x: "2017-04-19",
+                y: 342
+            }, {
+                x: "2017-04-20",
+                y: 354
+            }, {
+                x: "2017-04-24",
+                y: 369
+            }, {            	
+                x: "2017-04-25",
+                y: 386
+            }, {
+                x: "2017-04-26",
+                y: 394
+            }, {
+                x: "2017-04-27",
+                y: 399
+            }]
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                type: 'time',
+                position: 'bottom'
+            }]
+        }
+    }
+});
+</script>	
+	
+	</body>
+</html>
