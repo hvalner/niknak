@@ -163,8 +163,11 @@
             
         }
         #filtext{
-            width: 300px;
+            width: 400px;
             height: 300px;
+            padding: 50px;
+            z-index: 2000;
+            position: absolute;
             border: 1px solid red;
         }
         #next2{
@@ -480,7 +483,11 @@
            animate({
                opacity: "1",
                top: "20px",
-           }, 400);
+           }, 400).
+           delay(1900).
+           animate({
+               opacity: "0",
+           },400);
            
             $(".filimg").css("opacity", "0.0");
            $(".filimg").
@@ -488,6 +495,10 @@
            animate({
                opacity: "1",
                margin: "20px 30px",
+           },400).
+            delay(1900).
+           animate({
+               opacity: "0",
            },400);
            
            $("#filamentresult").css("opacity", "0.0");
@@ -495,9 +506,11 @@
            delay(1000).
            animate({
                opacity: "1",
+           },400).
+            delay(1900).
+           animate({
+               opacity: "0",
            },400);
-           
-           $("#filpink").attr("width", "260px");
            
            var random = Math.floor(Math.random()*3);
 //           alert(random);
@@ -505,20 +518,42 @@
            if (random == 0){
                $("#filimgresult").attr("src", "niknakgraphics/pinkfilament.png");
                $("#filpink").css("width", "230px");
-               document.querySelector("#filtext").innerHTML = "Pink is like the color of the pepto bismol for my anxious af stomach thx";
+               $("#filtext").html("Pink is like the color of the pepto bismol for my anxious af stomach thx");
+               $("#api").attr("src","niknakgraphics/peditapi.png");
+               $("#apispinner").attr("src","niknakgraphics/pedit.png");
+               $("#screen3").css("background-color","#4ac1d2");
 //               alert("hi");
            }
            if (random == 1){
                $("#filimgresult").attr("src", "niknakgraphics/bluefilament.png");
                $("#filblue").css("width", "230px");
-               $("#fildesc").html += "It's";
+               $("#filtext").html("Blue the color of the death of the universe, maybe, I don't know");
+               $("#api").attr("src","niknakgraphics/beditapi.png");
+               $("#apispinner").attr("src","niknakgraphics/bedit.png");
+               $("#screen3").css("background-color","#ffce00");
            }
            if (random == 2){
                $("#filimgresult").attr("src", "niknakgraphics/yellowfilament.png");
                $("#filyellow").css("width", "230px");
-               $("#fildesc").html += "Me";
+               $("#filtext").html("Yellow is the color of bananas. Good fruit. Healthy.");
+               $("#api").attr("src","niknakgraphics/yeditapi.png");
+               $("#apispinner").attr("src","niknakgraphics/yedit.png");
+               $("#screen3").css("background-color","#f93d6e");
            }
+           $("#fildesc").css("opacity", "0.0");
+           $("#fildesc").
+           delay(1000).
+           animate({
+               opacity: "1",
+           },400).
+           delay(1900).
+           animate({
+               opacity: "0",
+           },400);
 
+           
+//  ANIMATE SCREEN 3
+           
            
        });
         
