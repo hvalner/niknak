@@ -1,0 +1,378 @@
+<html>
+<head>
+    <title> NikNak Medium Routine</title>
+    <script src="interact.min.js"></script>
+    <script src="http://webdev.usc.edu/jqm.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Fredoka+One|Nunito|Quicksand|Rubik+Mono+One" rel="stylesheet">
+    
+    <script>
+    
+        var color = new Array;
+        color[0] = "red";
+        color[1] = "turquoise";
+        color[2] = "silver";
+        color[3] = "navy";
+        color[4] = "pink";
+        color[5] = "orange";
+        color[6] = "yellow";
+        color[7] = "green";
+        
+        //thenumber = Math.floor(Math.random()*8) 
+    
+    
+    
+    </script>
+    
+    
+    </head>
+
+    <style>
+        
+        #spinners{
+            background-color: greenyellow; 
+            height: 30%; 
+            width: 80%;
+            margin: auto; 
+            margin-top: 4%; 
+            margin-bottom:4%; 
+        }
+        
+        #instructions{
+            text-align: center; 
+            width: 80%; 
+            margin: auto; 
+            font-family: "Fredoka One"; 
+            font-size: 20pt; 
+        }
+        
+    .target {
+margin-top: 4%; 
+        margin-bottom:4%; 
+  width: 25%;
+  height: 25%;
+    float: left; 
+    
+     
+        
+
+  background-color: none;
+
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+        
+        #spinner{
+            width: 100%;
+            height: 100%;
+        }
+
+.target.switch-bg {
+  background-color: red;
+        }
+        
+.target.large {
+  -webkit-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+.rotate {
+  -webkit-transform: rotate(7200deg);
+  transform: rotate(7200deg);
+}
+        
+        
+        
+        
+        
+
+
+#inner-like {
+  height: 70%;
+    width: 30%; 
+    
+}
+        
+        #inner-hate{
+            height: 70%;
+            width: 30%;
+        }
+
+.like {
+  border-radius: 4px;
+  margin: 10px auto 30px;
+  padding: 10px;
+  width: 10%;
+    height: 20%; 
+  transition: background-color 0.3s;
+    float: left;
+    background-color: red; 
+    margin-right: 5%; 
+    
+}
+
+ .hate{
+  border-radius: 4px;
+  margin: 10px auto 30px;
+  padding: 10px;
+  width: 10%;
+     height: 20%; 
+     background-color: lawngreen; 
+  transition: background-color 0.3s;  
+     float:  left; 
+     margin-left: 5%; 
+     
+        } 
+        
+        
+ .emoji{
+       width: 100%;
+        height: 100%;
+        }
+
+#faces{
+            padding-left:  15%; 
+            height: 30%; 
+            width: 50%; 
+            margin: auto;
+            
+        }
+
+.drop-target {
+  border-color: #fff;
+  border-style: solid;
+}
+
+  .drag-drop {
+  display: inline-block;
+  min-width: 40px;
+  padding: 2em 0.5em;
+
+  border: solid 2px #fff;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+
+  transition: background-color 0.3s;
+}
+
+.tar-drop.can-drop {
+  border: solid 2px red; 
+    background-image: url(nn.png); 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: contain; 
+    width: 100px; 
+    height: 100px; 
+}
+        
+.tar-drop.hate-drop {
+  border: solid 2px green; 
+    background-image: url(nn.png); 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: contain; 
+    width: 100px; 
+    height: 100px; 
+}
+
+     
+    
+    </style>
+
+<body>
+    <div id="instructions"> 1. Double Click NikNaks to see possible colors <br>
+        2. Drag your favorites to the smiley face <br>  3. Drag the ugliest to the unhappy face</div>
+    
+    
+    
+    
+    
+    <div class="target tar-drop" id="#one">
+        <img id=spinner src="nn.png">
+    </div>
+    
+    <div class="target tar-drop" id=2>
+        <img id=spinner src="nn.png">
+    </div>
+        
+    
+    
+    <div class="target tar-drop" id=3>
+        <img id=spinner src="nn.png">
+    </div>
+    
+    <div class="target tar-drop" id=4>
+        <img id=spinner src="nn.png">
+    </div>
+        
+    
+    
+
+
+<div id=faces> 
+
+  <div id="inner-like" class="like">
+    <img class="emoji" src="hate.png">
+    
+    </div>
+
+    <div id="inner-hate" class="hate">
+    <img class="emoji" src="like.png"> 
+    </div>
+
+    </div>
+    
+<script>
+    
+    i = Math.random()*8;
+    i = Math.floor(i); 
+
+    
+  $(document).ready(function(){
+      
+for(i=0; i < color.length; i++){
+     $(".target").on("dblclick", function(){
+         $(this).css("backgroundColor", color[Math.floor(Math.random()*8)]);
+     }) 
+      
+  }
+  
+  });
+    
+ 
+    
+interact('.target')
+  .draggable({
+    // enable inertial throwing
+    inertia: true,
+    // keep the element within the area of it's parent
+    restrict: {
+      restriction: "parent",
+      endOnly: true,
+      elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+    },
+    // enable autoScroll
+    autoScroll: true,
+
+    // call this function on every dragmove event
+    onmove: dragMoveListener,
+    // call this function on every dragend event
+    onend: function (event) {
+      var textEl = event.target.querySelector('p');
+
+      textEl && (textEl.textContent =
+        'moved a distance of '
+        + (Math.sqrt(event.dx * event.dx +
+                     event.dy * event.dy)|0) + 'px');
+    }
+  });
+
+  function dragMoveListener (event) {
+    var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    // translate the element
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the posiion attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  }
+
+  // this is used later in the resizing and gesture demos
+  window.dragMoveListener = dragMoveListener;
+    
+
+interact('.target')
+  .on('tap', function (event) {
+   
+    event.currentTarget.classList.toggle('rotate');
+    event.preventDefault();  
+     
+ }); 
+    
+/* The dragging code for '.draggable' from the demo above
+ * applies to this demo as well so it doesn't have to be repeated. */
+    
+    
+
+// enable draggables to be dropped into this
+interact('.like').dropzone({
+  // only accept elements matching this CSS selector
+  accept: '.target',
+  // Require a 75% element overlap for a drop to be possible
+  overlap: 0.50,
+
+  // listen for drop related events:
+
+  ondropactivate: function (event) {
+    // add active dropzone feedback
+    event.target.classList.add('drop-active');
+  },
+  ondragenter: function (event) {
+    var draggableElement = event.relatedTarget,
+        likeElement = event.target;
+
+    // feedback the possibility of a drop
+    likeElement.classList.add('drop-target');
+    draggableElement.classList.add('can-drop');
+    
+  },
+ 
+  ondropdeactivate: function (event) {
+    // remove active dropzone feedback
+    event.target.classList.remove('drop-active');
+    event.target.classList.remove('drop-target');
+  }
+    
+}); 
+    
+interact('.hate').dropzone({
+  // only accept elements matching this CSS selector
+  accept: '.target',
+  // Require a 75% element overlap for a drop to be possible
+  overlap: 0.50,
+
+  // listen for drop related events:
+
+  ondropactivate: function (event) {
+    // add active dropzone feedback
+    event.target.classList.add('drop-active');
+  },
+  ondragenter: function (event) {
+    var draggableElement = event.relatedTarget,
+        hateElement = event.target;
+
+    // feedback the possibility of a drop
+    hateElement.classList.add('drop-target');
+    draggableElement.classList.add('hate-drop');
+    
+  },
+ 
+  ondropdeactivate: function (event) {
+    // remove active dropzone feedback
+    event.target.classList.remove('drop-active');
+    event.target.classList.remove('drop-target');
+  }
+});
+
+
+    </script>
+    
+    
+    
+    
+    
+    
+    </body>
+
+
+
+
+</html>
