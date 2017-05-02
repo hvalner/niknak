@@ -1,0 +1,303 @@
+<!--
+font-family: 'Bungee Shade', cursive;
+font-family: 'Bungee', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Rubik Mono One', sans-serif;
+font-family: 'Fredoka One', cursive; 
+-->
+<!-- colors: pink: #f93d6e; blue: #4ac1d2; yellow: #ffce00; -->
+
+<html>
+	<title>Nik Nak | About Us</title>
+		<head> 
+			<link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Fredoka+One|Nunito|Quicksand|Rubik+Mono+One" rel="stylesheet">
+				
+			<link id="pagestyle" rel="stylesheet" type="text/css" href="niknak_external.css">
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+			<script src="chart/RangeSlider-all.min.js"></script>
+			<link rel="stylesheet" href="chart/RangeSlider-all.min.css">
+
+			<style>
+            #main {
+                width: 600px;
+                height: auto;
+            }
+			</style>
+		</head>
+	<body>
+
+    <!-- line chart canvas element -->
+    <div id="main">
+        <canvas id="ini" width="500" height="300"></canvas>
+    </div>
+    <script>
+
+
+
+
+
+
+        // line chart data
+        var iniData = {
+            labels:[
+                "2017-03-26",
+                "2017-04-01",
+                "2017-04-02",
+                "2017-04-03",
+                "2017-04-04",
+                "2017-04-05",
+                "2017-04-06",
+                "2017-04-07",
+                "2017-04-08",
+                "2017-04-09",
+                "2017-04-10",
+                "2017-04-11",
+                "2017-04-12",
+                "2017-04-17",
+                "2017-04-18",
+                "2017-04-19",
+                "2017-04-20",
+                "2017-04-24",
+                "2017-04-25",
+                "2017-04-26",
+                "2017-04-27",
+                "2017-05-31",
+                "2017-06-30",
+                "2017-07-31",
+                "2017-08-31",
+                "2017-09-30",
+                "2017-10-31"
+            ],
+            datasets:[{
+                label: "NiKNak Total Rev",
+                backgroundColor:"rgba(237,35,35,0.2)",
+                /*You only put numeric data here*/
+                data:[
+                    0,
+                    16,
+                    26,
+                    46,
+                    146,
+                    161,
+                    221,
+                    236,
+                    241,
+                    251,
+                    258,
+                    287,
+                    302,
+                    307,
+                    312,
+                    342,
+                    354,
+                    369,
+                    386,
+                    394,
+                    399,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                ]
+            },
+            {
+                label: "NikNak Gross Profit",
+                backgroundColor:"rgba(35,112,237,0.2)",
+
+                /*You only put numeric data here*/
+                data:[
+                    -88,
+                    -72,
+                    -62,
+                    -42,
+                    58,
+                    73,
+                    133,
+                    148,
+                    153,
+                    163,
+                    82,
+                    111,
+                    126,
+                    131,
+                    136,
+                    166,
+                    178,
+                    193,
+                    213,
+                    218,
+                    223,
+
+
+                ],
+            },
+            {
+                label: "NikNak Operating Profit",
+                backgroundColor:"rgba(35,237,163,0.2)",
+
+                /*You only put numeric data here*/
+                data:[
+                    0,
+                    16,
+                    26,
+                    46,
+                    146,
+                    161,
+                    221,
+                    236,
+                    241,
+                    251,
+                    258,
+                    287,
+                    302,
+                    307,
+                    312,
+                    342,
+                    354,
+                    369,
+                    386,
+                    394,
+                    399,
+
+
+                ],
+            },
+            {
+                label: "Rev Projection",
+                backgroundColor:"rgba(237,35,35,0.6)",
+
+                /*You only put numeric data here*/
+                data:[
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    399,
+                    622,
+                    845,
+                    1068,
+                    1291,
+                    1514,
+                    1737,
+
+
+                ],
+            },
+            {
+                label: "Gross Projection",
+                backgroundColor:"rgba(35,112,237,0.6)",
+                data:[
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    399,
+                    534,
+                    757,
+                    980,
+                    1203,
+                    1426,
+                    1649,
+                ],
+            },
+            {
+                label: "Operating Projection",
+                backgroundColor:"rgba(35,237,163,0.6)",
+                data:[
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    ,
+                    399,
+                    622,
+                    845,
+                    1068,
+                    1291,
+                    1514,
+                    1737,
+                ],
+            }]
+        },
+
+
+        // create the options
+        options = {
+            scaleBeginAtZero: true,
+            /*This is how to customize the way the labels look :) */
+            tooltipTemplate: "<%if (label){%><%=label%>: <%}%>$<%= value %>",
+            label: 'test'
+        },
+
+
+
+        // get line chart canvas
+        ini = document.getElementById('ini').getContext('2d')
+
+
+        rs = new RangeSliderChart({
+
+            chartData: iniData,
+            chartOpts: options,
+            chartType: 'line',
+            chartCTX: ini,
+
+            class: 'my-chart-ranger',
+
+            initial: [0, 20]
+        })
+
+    </script>
+	</body>
+</html>
