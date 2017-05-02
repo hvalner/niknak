@@ -38,6 +38,7 @@
             background-color: #4ac1d2;
             height: 900px;
             width: 1500px;
+            z-index: 10;
             margin: 70px auto;
             border: 1px red solid;
         }
@@ -65,15 +66,16 @@
             font-size: 14pt;
             position: absolute;
             right: 100px;
-            top: 50px;
+            top: 10px;
             bborder: red solid 1px;
         }
         #bearings{
             position: absolute;
             height: 30%;
-            width: 5%;
+            width: 1%;
             left: 47%;
             top: 38%;
+            z-index: 100;
             bborder: red solid 1px;
         }
         #bearing1{
@@ -82,7 +84,7 @@
         #bearing2{
             position: absolute;
             width: 40%;
-            left: 20%;
+            right: 40%;
             top: 10%;
         }
         #bearing3{
@@ -107,8 +109,9 @@
             background-color: white;
             height: 900px;
             width: 1500px;
-            margin: 70px auto;
+            margin: auto;
             border: 1px red solid;
+            z-index: 20;
         }
         #fil{
             width:30%;
@@ -116,9 +119,17 @@
             bborder: 1px solid black;
             float: left;
         }
-        .filimg{
-            width: 210px;
-            margin: 20px 30px;
+        #filpink{
+            width: 200px;
+            margin: 20px 20px;
+        }
+        #filblue{
+            width: 200px;
+            margin: 20px 20px;
+        }
+        #filyellow{
+            width: 200px;
+            margin: 20px 20px;
         }
         #filamenttext{
             font-family: Quicksand, serif;
@@ -143,12 +154,18 @@
         }
         #fildesc{
             position: relative;
+            color: black;
             left: 1000px;
             top: 300px;
             border: 1px red solid;
             width: 500px;
             height: 500px;
             
+        }
+        #filtext{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
         }
         #next2{
             position: absolute;
@@ -180,7 +197,7 @@
         }
         #apitext{
             float: left;
-            margin: 10px;
+            margin: 40px 10px;
         }
         #apispinner{
             position: absolute;
@@ -309,7 +326,6 @@
         <img id="bearing2" src="niknakgraphics/bearingf.png">
         <img id="bearing3" src="niknakgraphics/bearingf.png">
             <br><br>
-        Navigate me!
         </div>
         <img id="california" src="niknakgraphics/cali.png">
         <button id="next1"> Next </button>
@@ -320,15 +336,16 @@
     <div id="screen2">
         <div id="filamenttext"><h1>Step 2: Choose a Filament Color</h1> Currently our spinners come in red, white, silver, turquoise, and navy blue!</div>
         <div id="fil">
-        <img id="filpink" class="filimg" src="niknakgraphics/pinkfilament.png">
-        <img id="filblue" class="filimg" src="niknakgraphics/bluefilament.png">
-        <img id="filyellow" class="filimg" src="niknakgraphics/yellowfilament.png">
+        <img class="filimg" id="filpink" src="niknakgraphics/pinkfilament.png">
+        <img class="filimg" id="filblue" src="niknakgraphics/bluefilament.png">
+        <img class="filimg" id="filyellow" src="niknakgraphics/yellowfilament.png">
         </div>
         <div id="filamentresult">
             <img id="filimgresult" src="niknakgraphics/pinkfilament.png" alt="Your filament of choice">
         </div>
         
         <div id="fildesc">
+            <div id="filtext"></div>
             <button id="next2"> Next </button>   
         </div>
        
@@ -378,15 +395,137 @@
         document.getElementById("bearings").addEventListener("click", function(){
         });
        
-        //ANIMATE First Screen
+    //ANIMATE SCREEN 1
        $(document).ready(function(){
-           $('bearingtext').css("visiblity", "hidden");
+           
+           $("#bearingtext").css("opacity", "0.0");
+           $("#bearingtext").
+           delay(300).
+           animate({
+               "top": "50px",
+               "opacity": "1",
+           }, 1000).
+            delay(3700).
+           animate({
+               opacity: "0",
+           },300);
+           
+           $("#china").css("opacity", "0.0");
+           $("#china").
+           animate({
+               left: "10px",
+               opacity: "1",
+           }, 800).
+           delay(4200).
+           animate({
+               opacity: "0",
+           },300);
+           
+           $("#california").css("opacity", "0.0");
+           $("#california").
+           animate({
+               right: "10px",
+               opacity: "1",
+           }, 800).
+           delay(4200).
+           animate({
+               opacity: "0",
+           },300);
+           
+           $("#bearings").css("opacity", "0.0");
+           $("#bearings").
+           delay(1100).
+           animate({
+             width: "6%",
+            opacity: "1",
+           }, 400).
+           animate({
+               width: "5%",
+           }, 200).
+           animate({
+               left: "900px",
+               top: "300px",
+           }, 800).
+           animate({
+               left: "1280px",
+               top: "650px",
+           }, 1200).
+           delay(1300).
+           animate({
+               opacity: "0",
+           },300); 
+           
+           $("#next1").css("opacity", "0.0");
+           $("#next1").
+           delay(3700).
+           animate({
+               "top": "320px",
+               "opacity": "1",
+           }, 1000).
+           delay(300).
+           animate({
+               opacity: "0",
+           },300);
+           
+//ANIMATE SCREEN 2
+           $("#screen2").css("opacity", "0.0");
+           $("#screen2").
+           animate({
+               opacity: "1",
+           }, 1000);
+           
+           $("#filamenttext").css("opacity", "0.0");
+           $("#filamenttext").
+           delay(1000).
+           animate({
+               opacity: "1",
+               top: "20px",
+           }, 400);
+           
+            $(".filimg").css("opacity", "0.0");
+           $(".filimg").
+           delay(1000).
+           animate({
+               opacity: "1",
+               margin: "20px 30px",
+           },400);
+           
+           $("#filamentresult").css("opacity", "0.0");
+           $("#filamentresult").
+           delay(1000).
+           animate({
+               opacity: "1",
+           },400);
+           
+           $("#filpink").attr("width", "260px");
+           
+           var random = Math.floor(Math.random()*3);
+//           alert(random);
+           
+           if (random == 0){
+               $("#filimgresult").attr("src", "niknakgraphics/pinkfilament.png");
+               $("#filpink").css("width", "230px");
+               document.querySelector("#filtext").innerHTML = "Pink is like the color of the pepto bismol for my anxious af stomach thx";
+//               alert("hi");
+           }
+           if (random == 1){
+               $("#filimgresult").attr("src", "niknakgraphics/bluefilament.png");
+               $("#filblue").css("width", "230px");
+               $("#fildesc").html += "It's";
+           }
+           if (random == 2){
+               $("#filimgresult").attr("src", "niknakgraphics/yellowfilament.png");
+               $("#filyellow").css("width", "230px");
+               $("#fildesc").html += "Me";
+           }
+
+           
        });
         
-        //MOVE NEXT
-//        document.getElementById("next1").addEventListener("click", function(){
-//            document.getElementById("screen1").innerHTML = '<div id="filamenttext"><h1>Step 2: Choose a Filament Color</h1> Currently our spinners come in red, white, silver, turquoise, and navy blue!</div><div id="fil"><img id="filpink" class="filimg" src="niknakgraphics/pinkfilament.png"><img id="filblue" class="filimg" src="niknakgraphics/bluefilament.png"><img id="filyellow" class="filimg" src="niknakgraphics/yellowfilament.png"></div><div id="filamentresult"><img id="filimgresult" src="niknakgraphics/pinkfilament.png" alt="Your filament of choice"></div><div id="fildesc"><button id="next2"> Next </button></div>'
-//        })
+//        MOVE NEXT
+        document.getElementById("california").addEventListener("click", function(){
+            document.getElementById("screen1").innerHTML = '<div id="screen2"><div id="filamenttext"><h1>Step 2: Choose a Filament Color</h1> Currently our spinners come in red, white, silver, turquoise, and navy blue!</div><div id="fil"><img id="filpink" class="filimg" src="niknakgraphics/pinkfilament.png"><img id="filblue" class="filimg" src="niknakgraphics/bluefilament.png"><img id="filyellow" class="filimg" src="niknakgraphics/yellowfilament.png"></div><div id="filamentresult"><img id="filimgresult" src="niknakgraphics/pinkfilament.png" alt="Your filament of choice"></div><div id="fildesc"><button id="next2"> Next </button></div></div>'
+        })
         
         
     </script>
