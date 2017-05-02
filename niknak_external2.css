@@ -61,6 +61,7 @@
 					position: fixed;
 					top: 0;
 					width: 97%;
+					z-index:999;
 						
 				}
 				
@@ -72,11 +73,9 @@
 					display: block;
 					color: #4ac1d2;
 					text-align: center;
-					padding: 16px 16px;
+					padding: 14px 16px;
 					text-decoration: none;
-					font-family: 'OpenDyslexic';
-					ffont-size: 2em;
-					margin-top:0%;
+					font-family: "OpenDyslexic";
 				}
 				
 				li a:hover {
@@ -86,6 +85,7 @@
 				.active {
 					background-color: #f93d6e;
 				}
+				
 
 				
 				#footer{
