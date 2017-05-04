@@ -1,66 +1,27 @@
-<!--
-font-family: 'Bungee Shade', cursive;
-font-family: 'Bungee', cursive;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Nunito', sans-serif;
-font-family: 'Rubik Mono One', sans-serif;
-font-family: 'Fredoka One', cursive; 
--->
-<!-- colors: pink: #f93d6e; blue: #4ac1d2; yellow: #ffce00; -->
-
-
 <html>
-    <head>
-	<title> Nik Nak </title>
-	
-<link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Fredoka+One|Nunito|Quicksand|Rubik+Mono+One" rel="stylesheet">	     
-		
-  <script language="javascript" type="text/javascript" src="p5.js"></script>
-  <script language="javascript" type="text/javascript" src="sketch3.1.js"></script>
-  <script src="interact.min.js"></script>
-  <script src="http://webdev.usc.edu/jqm.js"></script>
-    <link id="pagestyle" rel="stylesheet" type="text/css" href="niknak_external.css">
-    <link id ="mediumstyle" rel="stylesheet" type="text/css" href="mediumroutine.css"> 
+    <!-- colors: pink: #f93d6e; blue: #4ac1d2; yellow: #ffce00; -->
+<head>
+    <title>NikNak Interactive Story</title>
+     <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Fredoka+One|Nunito|Quicksand|Rubik+Mono+One" rel="stylesheet">
+    
+    <script src="interact.min.js"></script>
+    <script src="http://webdev.usc.edu/jqm.js"></script>
+    <link id ="mediumstyle" rel="stylesheet" type="text/css" href="mediumroutine.css">
     <link id ="presentstyle" rel="stylesheet" type="text/css" href="niknakpresent.css">
-
-        <script>
-    function swapStyleSheet(sheet){
-        document.getElementById('pagestyle').setAttribute('href', sheet);
-        }
-        </script>
+    
 </head>
-	
+    
+<!--   DRAG AND DROP - USE FOR BEARINGS http://www.webreference.com/programming/javascript/mk/column2/index.html-->
     <!--    HAVE SOME FRESH YOUNG AUDIO-->
-    <audio id="background" autoplay="1" loop="1"><source type="audio/mpeg" src="niknakaudio/bensound-funkyelement.mp3"></audio>
+    <audio id="backgroundaudio" autoplay="1" loop="1"><source type="audio/mpeg" src="niknakaudio/bensound-funkyelement.mp3"></audio>
     <audio id="step1" autoplay="1"> <source type="audio/mpeg" src="niknakaudio/step1_voiceover.m4a"></audio>
     <audio id="step2"> <source type="audio/mpeg" src="niknakaudio/step2_voiceover.m4a"></audio>
     <audio id="step3"> <source type="audio/mpeg" src="niknakaudio/step3_voiceover.m4a"></audio>
     <audio id="step4"> <source type="audio/mpeg" src="niknakaudio/step4_voiceover.m4a"></audio>
     <audio id="step5"> <source type="audio/mpeg" src="niknakaudio/step5_voiceover.m4a"></audio>
     <audio id="step6"> <source type="audio/mpeg" src="niknakaudio/step6_voiceover.m4a"></audio>
-    
-<body>
-	
 
-<div id="all">
-
-<div id="head">	
-<div id="splash"><img src="niknaklogo_color@4x.png" id="nikimg"></div>
-	
-<div id="sketch31" style="display:block;margin-left:300px"></div>
-<div>	
-<ul>
-	<li><a href="niknakprivatesummary.html">Private</a></li>
-	<li><a href="niknakmainassignment.html">Assignment</a></li>
-	<li><a href="niknakprivatedeal.html">Pitch</a></li>
-	<li><a href="niknakmainaboutus_bts.html">About Us</a></li>
-	<li><a href="niknakmainproduct_1.html">Product</a></li>	
-	<li><a class="active" href="niknak_external.html">Home</a></li>
-</ul>
-</div>
-</div>
-    
-<div id="splashimg"> 
+    <body>    
     <div id="screen1">
 <!--        <div id="dots"></div>-->
 <!--          <button class="captions">Audio Captions</button>-->
@@ -166,78 +127,17 @@ font-family: 'Fredoka One', cursive;
         <img id="final" src="niknakgraphics/pfinal.png">
         <button id="next6"> Order Your Own! </button>
     </div>
-    
+     
     <div id="screen7">
         <button class="captions">Captions On</button>
         <button id="audiotoggle">Audio Off</button>
         <div id="audiocaptions"></div>
     </div>
-</div>
-    </div>
     
-<div id="footer">Follow us on<img src="fb-art.png" id="icon" >		
-		<button id="style1">Classic</button>
-		<button id="style2">Eco</button>
-		<button id="style3">Accessible</button>
-<!--		<button id="test">Test</button>-->
-        
-</div>
-    
-	</body>
-    
-    <!-- COOKIE BIDNESS -->
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="jquery-2.1.3.min.js"></script>
-    <script src="js.cookie.js"></script>
-     <script>
-         
-        $("document").ready(function(){
-            //SET COOKIE named "style"  
-            $("#style1").on("click", function(){
-                sheet = Cookies.set("style", "1");
-                $('#pagestyle').attr("href","niknak_external.css");
-//                alert(sheet);
-				bgfidg = 255;
-				reset = true;
-            });
-            $("#style2").on("click", function(){
-                sheet = Cookies.set("style", "2");
-                $('#pagestyle').attr("href", "niknak_external1.css");
-                
-//                alert(sheet);
-				bgfidg = 0;
-				reset = true;
-            });
-            $("#style3").on("click", function(){
-                sheet = Cookies.set("style", "3");
-                $('#pagestyle').attr("href", "niknak_external2.css");
-//                alert(sheet);
-				bgfidg = 255;
-				reset = true;
-            });
-            
-            //READ COOKIE 
-            what = parseFloat(Cookies.get("style"));
-            var sheet= what;
-            
-            //LOAD STYLE
-            if(sheet == 1){
-                $('#pagestyle').attr("href", "niknak_external.css");
-				bgfidg = 255;
-            }
-            if(sheet == 2){
-                $('#pagestyle').attr("href", "niknak_external1.css");
-				bgfidg = 0;
-            }
-            if(sheet == 3){
-                $('#pagestyle').attr("href", "niknak_external2.css");
-				bgfidg = 255;
-            }
-        });
-    </script>
-    
+</body>
     <script src="js.cookie.js"></script>
     <script src="jquery-2.1.3.min.js"></script>
     <script src="niknakpresent.js"></script>
     <script src= "mediumroutine.js"></script>
+    
 </html>

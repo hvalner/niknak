@@ -8,60 +8,58 @@ font-family: 'Fredoka One', cursive;
 -->
 <!-- colors: pink: #f93d6e; blue: #4ac1d2; yellow: #ffce00; -->
 
+
 <html>
-	<title>Nik Nak | Contribution</title>
-		<head> 
-			
-			<link id="pagestyle" rel="stylesheet" type="text/css" href="niknak_external.css">
+    <head>
+	<title> Nik Nak </title>
+	
+<link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Fredoka+One|Nunito|Quicksand|Rubik+Mono+One" rel="stylesheet">	     
+		
+  <script language="javascript" type="text/javascript" src="p5.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch3.1.js"></script>
+
+		<link id="pagestyle" rel="stylesheet" type="text/css" href="niknak_external.css">
 
 		<script>
 			function swapStyleSheet(sheet){
 				document.getElementById('pagestyle').setAttribute('href', sheet);
-			}
-		</script>
+}
+</script>
+		
 	</head>
 	<body>
 	
 
 <div id="all">
-	
-	<div id="splash"><img src="niknaklogo_color@4x.png" id="nikimg" ></div>					
-		<div>
-			<ul>
-            <li><a href="niknakprivatesummary.html">Private</a></li>
-			  <li><a class="active" href="niknakmainassignment.html">Assignment</a></li>
-			  <li><a href="niknakprivatedeal.html">Pitch</a></li>
-			  <li><a href="niknakmainaboutus_bts.html">About Us</a></li>
-			  <li><a href="niknakmainproduct_1.html">Product</a></li>	
-			  <li><a href="niknak_external.html">Home</a></li>
-			</ul>
-		</div>
 
+<div id="head">	
+<div id="splash"><img src="niknaklogo_color@4x.png" id="nikimg" ></div>
 	
-	<div class="body" id="assignment">
-	<p>
-		Hal was incharge of css style for the private pitch side of the site, and made the content for summary and market. As well as last minute organization and hosting.
-	</p>
-	<p>
-		Liam designed the primary layout and aesthetic for the site, the home page (splash video coming soon) and the product page. 
-	</p>
-	<p>
-		Clayton was in charge of content for the private team and deal pages.
-	</p>
-	<p>
-		Harry was incharge of the about pages, as well as this page. He also setup the entire Github repo so we can all work on this remotely and sync files. 
-	</p>
-	</div>
-	
+<div id="sketch31" style="display:block;margin-left:300px"></div>
+<div>	
+<ul>
+	<li><a href="niknakprivatesummary.html">Private</a></li>
+	<li><a href="niknakmainassignment.html">Assignment</a></li>
+	<li><a href="niknakprivatedeal.html">Pitch</a></li>
+	<li><a href="niknakmainaboutus_bts.html">About Us</a></li>
+	<li><a href="niknakmainproduct_1.html">Product</a></li>	
+	<li><a class="active" href="niknak_external.html">Home</a></li>
+</ul>
+</div>
+</div>
+<div id="splashimgbox"> <img src="garage.jpg" id="splashimg" ></div>
 	
 	<div id="footer">Follow us on<img src="fb-art.png" id="icon" >		
-		<button onclick="swapStyleSheet('niknak_external.css')">Default Style Sheet</button>
-		<button onclick="swapStyleSheet('niknak_external1.css')">1 Style Sheet</button>
-		<button onclick="swapStyleSheet('niknak_external2.css')">2 Style Sheet</button>
+		<button id="style1">Classic</button>
+		<button id="style2">Eco</button>
+		<button id="style3">Accessible</button>
+<!--		<button id="test">Test</button>-->
+        
 		 </div>
 	</div>
-	
-	<!-- COOKIE BIDNESS -->
+	</body>
+    
+    <!-- COOKIE BIDNESS -->
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="jquery-2.1.3.min.js"></script>
     <script src="js.cookie.js"></script>
@@ -110,6 +108,5 @@ font-family: 'Fredoka One', cursive;
 				bgfidg = 255;
             }
         });
-        </script>
-	</body>
+    </script>
 </html>

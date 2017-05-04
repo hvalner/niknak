@@ -1,0 +1,399 @@
+   body{
+            background-color: #4ac1d2;
+            font-family: Quicksand, sans-serif;
+            font-size: 14pt;
+            color: white;
+        }
+        h1{
+            font-family: Fredoka One, sans-serif;
+            font-size: 34pt;
+        }
+        .dot{
+           width: 50%;
+            margin: 20%;
+            transition: all 200ms ease;
+        }
+        .dot:hover{
+            width: 80%;
+        }
+        #dots{
+            position: fixed;
+            height: 20%;
+            width: 2%;
+            right: 7%;
+            top: 20%;
+            z-index: 100;
+            bborder: 1px black solid;
+        }
+    
+    .captions{
+        position: absolute;
+        font-family: 'Fredoka One', sans-serif;
+        color: white;
+        background-color: grey;
+        border-radius: 10px;
+        font-size: 12pt;
+        height: 30px;
+        width: 150px;
+        border: none;
+        bottom: 110px;
+        left: 270px;
+        z-index: 10000;
+    }
+    #audiotoggle{
+        position: absolute;
+        font-family: 'Fredoka One', sans-serif;
+        color: white;
+        background-color: grey;
+        border-radius: 10px;
+        font-size: 12pt;
+        height: 30px;
+        width: 100px;
+        border: none;
+        bottom: 110px;
+        left: 430px;
+        z-index: 10000;
+        
+    }
+    #audiocaptions{
+        position: absolute;
+        bottom: 0px;
+        left: 250px;
+        height: 80px;
+        width: 1050px;
+        font-size: 18pt;
+        color: black;
+        background-color: white;
+        border-radius: 30px;
+        bborder: 1px red solid; 
+        padding: 10px;
+        text-align: center;
+    }
+        
+    #screen7{
+        position: absolute;
+        height: 200px;
+        width: 1500px;
+        z-index: 10000;
+        bottom: -65px;
+        bborder: 1px red solid;
+    }
+        
+/*SCREEN 1*/
+        #screen1{
+            position: absolute;
+            background-color: #4ac1d2;
+            height: 900px;
+            width: 1500px;
+            z-index: 10;
+            top: 70px;
+            bborder: 1px red solid;
+        }
+        #box1{
+            position: absolute;
+            width: 60%;
+        }
+        #china{
+            position: absolute;
+            width: 100%;
+            left: 0%;
+            top: 5%;
+        }
+         #california{
+            position: absolute;
+            width: 30%;
+            right: 0%;
+            top: 35%;
+            z-index: 80;
+             
+        }
+        #bearingtext{
+            font-family: Quicksand, serif;
+            color: white;
+            font-size: 14pt;
+            position: absolute;
+            right: 100px;
+            top: 10px;
+            bborder: red solid 1px;
+        }
+        #bearings{
+            position: absolute;
+            height: 30%;
+            width: 1%;
+            left: 47%;
+            top: 38%;
+            z-index: 100;
+            bborder: red solid 1px;
+        }
+        #bearing1{
+            width: 40%;
+        }
+        #bearing2{
+            position: absolute;
+            width: 40%;
+            right: 40%;
+            top: 10%;
+        }
+        #bearing3{
+            width: 40%;
+        }
+        #next1{
+            position: absolute;
+            right: 100px;
+            top: 300px;
+            font-family: Fredoka One, sans-serif;
+            font-size: 18pt;
+            height: 50px;
+            width: 100px;
+            background-color: white;
+            border-radius: 20px;
+            border: none;
+            color:#f93d6e; 
+        }
+/*        SCREEN 2*/
+        #screen2{
+            position: absolute;
+            background-color: white;
+            height: 900px;
+            width: 1500px;
+            top: 70px;
+            bborder: 1px red solid;
+            z-index: 20;
+        }
+        #fil{
+            width:30%;
+            height: 100%;
+            bborder: 1px solid black;
+            float: left;
+        }
+        #filpink{
+            width: 200px;
+            margin: 20px 20px;
+        }
+        #filblue{
+            width: 200px;
+            margin: 20px 20px;
+        }
+        #filyellow{
+            width: 200px;
+            margin: 20px 20px;
+        }
+        #filamenttext{
+            font-family: Quicksand, serif;
+            position: absolute;
+            color: grey;
+            left: 350px;
+            top: 10px;
+        }
+        #filamentresult{
+            position: relative;
+            width: 900px;
+            height: 900px;
+            float: left;
+            right: 10px;
+            top: -10px;
+            bborder: 1px solid black;
+        }
+        #filimgresult{
+            position: absolute;
+            width: 500px;
+            bottom: 100px;
+            left: 10px;
+        }
+        #fildesc{
+            position: relative;
+            color: black;
+            left: 1000px;
+            top: 300px;
+            bborder: 1px red solid;
+            width: 500px;
+            height: 500px;
+            
+        }
+        #filtext{
+            width: 400px;
+            height: 300px;
+            padding: 50px;
+            z-index: 2000;
+            font-size: 18pt;
+            color: grey;
+            position: absolute;
+            bborder: 1px solid red;
+        }
+        #next2{
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+            font-family: Fredoka One, sans-serif;
+            font-size: 18pt;
+            height: 50px;
+            width: 100px;
+            background-color: grey;
+            border-radius: 20px;
+            border: none;
+            color: white; 
+        }
+        
+/*SCREEN 3*/
+        #screen3{
+            position: absolute;
+            z-index: 30;
+            background-color: #ffce00;
+            height: 900px;
+            width: 1500px;
+            top: 70px;
+            bborder: 1px red solid;
+        }
+        #api{
+            margin: 30px 10px;
+            width: 1100px;
+            float: left;
+        }
+        #apitext{
+            float: left;
+            margin: 200px 10px;
+        }
+        #apispinner{
+            position: absolute;
+            z-index: 33;
+            left: 550px;
+            top: 200px;
+            width: 200px;
+        }
+        #next3{
+            position: absolute;
+            bottom: 400px;
+            right: 100px;
+            font-family: Fredoka One, sans-serif;
+            font-size: 18pt;
+            height: 50px;
+            width: 100px;
+            background-color: white;
+            border-radius: 20px;
+            border: none;
+            color: #4ac1d2; 
+        }
+        
+/*  SCREEN 4      */
+        #screen4{
+            position: absolute;
+            z-index: 40;
+            background-color: #4ac1d2;
+            height: 900px;
+            width: 1500px;
+            top: 70px;
+            bborder: 1px red solid;
+        }
+        #printer{
+            margin: 50px 180px;
+        }
+        #printertext{
+            position: absolute;
+            right: 100px;
+            top: 100px;
+            text-align: right;
+        }
+        #next4{
+            position: absolute;
+            bottom: 500px;
+            right: 100px;
+            font-family: Fredoka One, sans-serif;
+            font-size: 18pt;
+            height: 50px;
+            width: 100px;
+            background-color: white;
+            border-radius: 20px;
+            border: none;
+            color: #f93d6e; 
+        }
+        
+/*    SCREEN 5*/
+        #screen5{
+            position: absolute;
+            z-index: 50;
+            background-color: white;
+            height: 900px;
+            width: 1500px;
+            top: 70px;
+            bborder: 1px red solid;
+        }
+        #hammer{
+            position: absolute;
+            left: 200px;
+            top: 170px;
+            float:left;
+        }
+        #construct{
+            margin: 400px 100px;
+            float: left;
+        }
+        #constructiontext{
+            color: #f93d6e;
+            margin: 180px 10px;
+        }
+        #next5{
+            position: absolute;
+            bottom: 550px;
+            right: 100px;
+            font-family: Fredoka One, sans-serif;
+            font-size: 18pt;
+            height: 50px;
+            width: 100px;
+            background-color: #f93d6e;
+            border-radius: 20px;
+            border: none;
+            color: white; 
+        }
+        
+/*SCREEN 6*/
+        #screen6{
+            position: absolute;
+            z-index: 60;
+            background-color: white;
+            color: #4ac1d2;
+            height: 900px;
+            width: 1500px;
+            top: 70px;
+            bborder: 1px red solid;
+        }
+        #hands{
+            position: absolute;
+            top: 400px;
+            right: 150px;
+        }
+        #final{
+            position: absolute;
+            top: 300px;
+            right: 350px;
+        }
+        #handstext{
+            position: absolute;
+            bborder: 1px solid red;
+            right: 50px;
+            top: 50px;
+            width: 500px;
+            height: 200px;
+        }
+        #next6{
+            position: absolute;
+            bottom: 200px;
+            right: 100px;
+            font-family: Fredoka One, sans-serif;
+            font-size: 18pt;
+            height: 50px;
+            width: 400px;
+            background-color: #f93d6e;
+            border-radius: 20px;
+            border: none;
+            color: white; 
+        }
+        #medium{
+            position: absolute;
+            margin: 50px;
+            width: 800px;
+            height: 700px;
+            z-index: 200000000;
+            bborder: 1px red solid;
+            
+        }
+        

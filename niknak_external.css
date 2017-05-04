@@ -1,4 +1,5 @@
-	@font-face {
+
+@font-face {
 	font-family: 'OpenDyslexic';
 	src: url('OpenDyslexic-Regular.eot');
 	src: url('OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'),
@@ -8,14 +9,20 @@
 	font-style: normal;
 }
 			#all{
-					/* margin-top:0%;
-					top: 0px;
-					bottom: 0px;
-					right: 0px;
-					left: 0px;
-					position: absolute;	*/
+                background-color: white;
+				margin-top:0%;
+				top: 0px;
+				bottom: 0px;
+				right: 0px;
+				left: 0px;
+				position: absolute;	
+                height: 1400px;
 				}
-				
+            
+            body{
+                background-color: white;
+            }
+	
 				#splash{
 					
 					text-align: left;
@@ -28,10 +35,30 @@
 				}
 				
 				#splashimg{
-					margin-top: 10px;
-					width: 100%;
-						z-index:999;
+                    position: relative;
+					width: 1500px;
+                    height: 900px;
+                    background-color: white;
+                    margin: auto;
+					margin-top: 130px;
+				    z-index:999;
 					
+				}
+
+                #footer{
+					background-color: white;
+                    color: #4ac1d2;
+                    position:absolute;
+                    width: 100%;
+                    bottom: -400px;
+                    z-index: 80000;
+                    bborder: red solid 1px;
+					display: flex;
+					justify-content: center;
+					ppadding: 5%;
+					height: 200px;
+					align-items: center;
+					font-family: "Quicksand";
 				}
 
 				#head{
@@ -41,7 +68,7 @@
 					height: 115px;
 					width: 100%;
 					margin: 0;
-					z-index:998;
+					z-index:900000;
 				}
 			
 				#nikimg{
@@ -81,18 +108,7 @@
 				.active {
 					background-color: #f93d6e;
 				}
-				
 
-
-				#footer{
-					bbackground-color: white;
-					display: flex;
-					justify-content: center;
-					ppadding: 5%;
-					height: 20%;
-					align-items: center;
-					font-family: "Quicksand";
-				}
 					
 				#icon{
 					height: 50px;
@@ -177,6 +193,7 @@
 				
 				
 				}
+
     		@media screen and (max-width: 1000px){
 					ul{
 						top: 75px;
