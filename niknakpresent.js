@@ -42,7 +42,7 @@
 //JQUERY STUFF
        $(document).ready(function(){
             
-           $("#backgroundaudio").prop("volume",".2");
+           $("#backgroundaudio").prop("volume",".1");
            //AUDIO TOGGLE
            $("#audiotoggle").on("click", function(){
                if ($("#audiotoggle").html() == "Audio Off"){
@@ -51,7 +51,7 @@
                } else if ($("#audiotoggle").html() == "Audio On"){
                    $("#audiotoggle").html("Audio Off");
                    $("audio").prop("volume","1");
-                   $("#backgroundaudio").prop("volume",".2");
+                   $("#backgroundaudio").prop("volume",".1");
                };
            });
            
